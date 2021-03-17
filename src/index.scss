@@ -1,7 +1,8 @@
 // sass variable and mixin file link
 @import "var";
 @import "mixin";
-
+// font family
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -111,12 +112,12 @@ html {
         p {
           font-size: 1.1rem;
         }
-        .cartIcon{
+        .cartIcon {
           font-size: 2rem;
         }
         .cartSecs {
           text-align: center;
-          margin: 5px  0.6rem 0;
+          margin: 5px 0.6rem 0;
         }
       }
     }
@@ -230,5 +231,212 @@ html {
         }
       }
     }
+  }
+}
+////////////////////////////////////////////////////////
+///////////////////////  section: second//////////////////////
+////////////////////////////////////////////////////////
+#second {
+  padding: 10rem 5rem 8rem 5rem;
+  .textWrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    h1 {
+      font-size: 5rem;
+      color: $primaryColor;
+      white-space: nowrap;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .imageWrapper {
+    position: relative;
+    // z-index: -1;
+    // .shade {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.78));
+    // }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .brandsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    .products {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 2rem 0 0 0;
+      img {
+        width: 10rem;
+        height: 12rem;
+      }
+      h5 {
+        margin: 2rem;
+        color: grey;
+        padding: 0.4rem 0.6rem;
+        border: transparent;
+        box-shadow: 0 0 1.7px 1px rgba(0, 0, 0, 0.315);
+      }
+    }
+    .exploreBtn {
+      display: inline-block;
+      margin: 2rem auto;
+      text-decoration: none;
+      color: grey;
+      font-size: 1rem;
+      border: 0.05rem solid black;
+      align-self: flex-start;
+      padding: 0.4rem 0.6rem;
+      border-radius: 2px;
+    }
+  }
+}
+////////////////////////////////////////////////////////
+/////////////////////// section: third //////////////////////
+////////////////////////////////////////////////////////
+#third {
+}
+////////////////////////////////////////////////////////
+/////////////////////// section: fourth //////////////////////
+////////////////////////////////////////////////////////
+#fourth {
+  padding: 4rem 4rem;
+  background: rgba(218, 211, 211, 0.15);
+  .detailsWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    &:hover .secIcon {
+      transform: scale(1.15);
+      color: $primaryColor;
+    }
+    .secIcon {
+      font-size: 4rem;
+      transition: 0.3s linear;
+    }
+    .rightSec {
+      p {
+        font-size: 2rem;
+      }
+      small {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+////////////////////////////////////////////////////////
+/////////////////////// section: five //////////////////////
+////////////////////////////////////////////////////////
+#fifth {
+  padding: 5rem 6rem;
+  .cardWrapper {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.99),
+        rgba(0, 0, 0, 0.19)
+      ),
+      url(./assets/images/slider1.jpg);
+    background-size: cover;
+    padding: 4rem 1.8rem;
+    padding-left: 3rem;
+    color: white;
+    border-radius: 2rem;
+    transition: 0.4s linear;
+    margin: 0 10px 0 10px;
+    &:hover {
+      transform: scale(1.03);
+    }
+    p {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 2.8rem;
+      font-weight: bolder;
+      margin-top: 1.5rem;
+      margin-bottom: 2.8rem;
+    }
+    .secButton {
+      font-size: 1.4rem;
+      border-radius: 0.6rem;
+      padding: 0.6rem 4rem;
+      color: white;
+      background: $primaryColor;
+      text-transform: none;
+    }
+  }
+}
+////////////////////////////////////////////////////////
+/////////////////////// section: six //////////////////////
+////////////////////////////////////////////////////////
+#sixth {
+  padding: 5rem 0;
+
+  #blackHeading {
+    color: black;
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+
+  #whiteHeading {
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-shadow: 0 0 15px black;
+  }
+
+  pre {
+    font-size: 1.4rem;
+  }
+
+  a {
+    padding: 0.4rem 1.8rem;
+    border-radius: 0;
+    background: black;
+    border: none;
+  }
+
+  .leftFirst {
+    background: url(./assets/images/slider1.jpg);
+    background-size: cover;
+    padding: 4rem 1.8rem;
+    padding-left: 3rem;
+  }
+
+  .rightFirst {
+    background: url(./assets/images/slider1.jpg);
+    background-size: cover;
+    padding: 4rem 1.8rem;
+    padding-left: 3rem;
+  }
+
+  .leftSecond {
+    background: url(./assets/images/slider1.jpg);
+    background-size: cover;
+    padding: 4rem 1.8rem;
+    padding-left: 3rem;
+    margin-top: 2rem;
+  }
+
+  .rightSecond {
+    background: url(./assets/images/slider1.jpg);
+    background-size: cover;
+    padding: 4rem 1.8rem;
+    padding-left: 3rem;
+    margin-top: 2rem;
   }
 }

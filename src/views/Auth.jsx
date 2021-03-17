@@ -48,15 +48,15 @@ const Auth = (props) => {
   const dispatch = useDispatch();
   const classes = useStyles();
   const history = useHistory();
-  const { loading } = useSelector((state) => state.authReducer);
-  console.log(loading);
+  const { loading ,isLoggedIn } = useSelector((state) => state.authReducer);
+  console.log(isLoggedIn);
   const [isSignIn, setIsSignIn] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //   if (isLoggedIn) {
-  //     // history.push("/home");
-  //     return <p>You are loggedin.</p>;
-  //   }
+    if (isLoggedIn) {
+      history.push("/home");
+      return <p>You are loggedin.</p>;
+    }
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "" || password === "") {

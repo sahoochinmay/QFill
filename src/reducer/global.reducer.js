@@ -3,20 +3,17 @@ import { ALERT_START, ALERT_END } from "../constant/global.constant";
 const initialState = {
   flag: false,
   type: "",
-  msg: "",
+  msg: ""
 };
 
 const globalReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case ALERT_START:
-      return {
-        flag: true,
-        type: payload.type,
-        msg: payload.msg,
-      };
+      return { ...state, flag: true, type: payload.type, msg: payload.msg };
     case ALERT_END:
       return {
+        ...state,
         flag: false,
         type: "",
         msg: "",

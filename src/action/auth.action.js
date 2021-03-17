@@ -6,6 +6,7 @@ import {
   AUTH_SIGNUP,
 } from "../constant/auth.constant";
 import { auth } from "../config/firebase";
+import { ShowAlert } from './global.action'
 
 export const SignIn = (email, password) => (dispatch) => {
   dispatch({
@@ -19,20 +20,20 @@ export const SignIn = (email, password) => (dispatch) => {
         type: AUTH_SIGNIN,
         payload: res.user,
       });
-      // dispatch(
-      //   showAlert({
-      //     type: "success",
-      //     msg: "😄 Logged in Successfull.",
-      //   })
-      // );
+      dispatch(
+        ShowAlert({
+          type: "success",
+          msg: "😄 Logged in Successfull.",
+        })
+      );
     })
     .catch((err) => {
-      // dispatch(
-      //   showAlert({
-      //     type: "error",
-      //     msg: err.message,
-      //   })
-      // );
+      dispatch(
+        ShowAlert({
+          type: "error",
+          msg: err.message,
+        })
+      );
       dispatch({
         type: AUTH_END,
         payload: null,
@@ -40,24 +41,37 @@ export const SignIn = (email, password) => (dispatch) => {
     });
 };
 
-export const SignUp = (data) => dispatch =>{
+export const SignUp = (email,password) => dispatch => {
+  console.log("signup start");
   dispatch({
     type: AUTH_START,
     payload: null,
   });
- auth.createUserWithEmailAndPassword(data?.email, data?.password)
- .then((res) =>{
-  dispatch({
-    type: AUTH_SIGNUP,
-    payload: res.user,
-  });
- })
- .catch(err =>{
-  dispatch({
-    type: AUTH_END,
-    payload: null,
-  });
- })
+  auth.createUserWithEmailAndPassword(email,password)
+    .then((res) => {
+      dispatch({
+        type: AUTH_SIGNUP,
+        payload: res.user,
+      });
+      dispatch(
+        ShowAlert({
+          type: "success",
+          msg: "😄 Account created Successfull.",
+        })
+      );
+    })
+    .catch(err => {
+      dispatch({
+        type: AUTH_END,
+        payload: null,
+      });
+      dispatch(
+        ShowAlert({
+          type: "error",
+          msg: err.message,
+        })
+      );
+    })
 }
 
 export const SignOut = () => (dispatch) => {
@@ -72,20 +86,20 @@ export const SignOut = () => (dispatch) => {
         type: AUTH_SIGNOUT,
         payload: null,
       });
-      // dispatch(
-      //   showAlert({
-      //     type: "success",
-      //     msg: "😄 Logged out successfull.",
-      //   })
-      // );
+      dispatch(
+        ShowAlert({
+          type: "success",
+          msg: "😄 Logged out successfull.",
+        })
+      );
     })
     .catch((err) => {
-      // dispatch(
-      //   showAlert({
-      //     type: "error",
-      //     msg: err.message,
-      //   })
-      // );
+      dispatch(
+        ShowAlert({
+          type: "error",
+          msg: err.message,
+        })
+      );
       dispatch({
         type: AUTH_END,
         payload: null,
