@@ -1,12 +1,31 @@
-import React from "react";
-import logo from '../assets/images/logo.png'
-import slider1 from '../assets/images/slider1.jpg'
-import slider2 from '../assets/images/slider2.jpg'
+import React, { useState } from "react";
+import { Search, ShoppingCart, Person } from "@material-ui/icons";
+import logo from "../assets/images/logo.png";
+import slider1 from "../assets/images/slider1.jpg";
+import slider2 from "../assets/images/slider2.jpg";
+import slider3 from "../assets/images/slider3.jpg";
 
 const Landing = () => {
+  // START: slider
+  const [sliderSelect, setSliderSelect] = useState(slider1);
+  const sliderArr = [slider1, slider2, slider2];
+  let i = 0;
+  let state = 0;
+  // const selectSlider = setInterval(() => {
+  //   setSliderSelect(sliderArr[i]);
+  //   if (i === sliderArr.length - 1) {
+  //     state = 1;
+  //   } else if (i === 0 && state === 1) {
+  //     state = 0;
+  //   }
+  //   console.log(state);
+  //   state === 0 ? i++ : i--;
+  //   console.log("count", i);
+  // }, 3000);
+  // END: slider
   return (
     <>
-    {/* section:header */} 
+      {/* section:header */}
       <section id="header">
         <div class="opa">
           <div class="headerText">
@@ -23,7 +42,7 @@ const Landing = () => {
           </div>
         </div>
 
-        <img src={slider1} alt="slider" id="image" />
+        <img src={sliderSelect} alt="slider" id="image" />
 
         <nav id="navBar">
           <div id="logo">
@@ -49,23 +68,17 @@ const Landing = () => {
             </ul>
 
             <div class="searchBox">
-              <input
-                type="search"
-                name=""
-                id=""
-                placeholder="Search Item here..."
-              />
-              <i class="fa fa-search" aria-hidden="true"></i>
+              <input type="search" name="" id="" placeholder="Search here..." />
+              <Search className="searchIcon" />
             </div>
 
             <div class="cart">
-              <div class="cartSec">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <div class="cartSecs">
+                <ShoppingCart className="cartIcon" />
                 <p>Cart</p>
               </div>
-
-              <div class="signUp">
-                <i class="fa fa-user" aria-hidden="true"></i>
+              <div class="cartSecs">
+                <Person className="cartIcon" />
                 <p>account</p>
               </div>
             </div>
