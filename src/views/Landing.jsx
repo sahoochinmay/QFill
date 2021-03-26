@@ -17,6 +17,7 @@ import slider2 from "../assets/images/slider2.jpg";
 import slider3 from "../assets/images/slider3.jpg";
 import s2p1 from "../assets/images/s2p1.png";
 import s2p2 from "../assets/images/s2p2.png";
+import Footer from "../component/Footer";
 
 const Landing = () => {
   const history = useHistory();
@@ -268,6 +269,8 @@ const Landing = () => {
           </div>
         </Grid>
       </section>
+      {/* section: footer */}
+      <Footer />
     </>
   );
 };
