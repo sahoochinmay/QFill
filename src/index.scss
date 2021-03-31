@@ -874,25 +874,25 @@ nav {
     width: 50%;
     max-width: 1000px;
     display: block;
-    margin:  0 auto 20px;
+    margin: 0 auto 20px;
   }
-  .short_image_section{
+  .short_image_section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
     .short_image {
-    height: 45px;
-    width: 45px;
-    padding: 2px;
-    margin-top: 9px;
-    border-radius: 4px;
-    box-shadow: 1px 1px 6px 1px $primaryColor;
-    cursor: pointer;
+      height: 45px;
+      width: 45px;
+      padding: 2px;
+      margin-top: 9px;
+      border-radius: 4px;
+      box-shadow: 1px 1px 6px 1px $primaryColor;
+      cursor: pointer;
+    }
   }
-  }
-  
+
   .large_image {
     width: 100%;
     max-height: 400px;
@@ -905,15 +905,15 @@ nav {
     font-size: 1.5rem;
     margin: 5px 0;
   }
-  .description{
+  .description {
     font-size: 1.45rem;
   }
-  .detail_price{
+  .detail_price {
     margin: 5px 0;
     font-size: 3rem;
     font-weight: 500;
   }
-  .category{
+  .category {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 5px 0;
@@ -929,7 +929,7 @@ nav {
       font-size: small;
     }
   }
-  .stock{
+  .stock {
     font-size: 2rem;
   }
   .share_box {
@@ -941,6 +941,98 @@ nav {
     .share_icon {
       font-size: 2.2rem;
       cursor: pointer;
+    }
+  }
+  .buttons {
+    .button {
+      color: white;
+      width: 47%;
+      margin: 5px;
+      height: 60px;
+      font-size: 1.5rem !important;
+    }
+    .icon {
+      margin-top: -3px;
+      font-size: 1.5rem;
+    }
+    .cart_button {
+      background: $secondaryColor;
+    }
+    .buy_button {
+      background: $primaryColor;
+    }
+  }
+}
+////////////////////////////////////////////////////////
+/////////////////////// section: cart //////////////////////
+////////////////////////////////////////////////////////
+#cart {
+  margin-top: 30px;
+  padding: 0 60px;
+  .cart_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .right_section {
+      display: flex;
+      .map {
+        height: 20px;
+        margin-right: 5px;
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+      #location_box {
+        margin: -5px 0 0 10px;
+        padding: 5px 10px;
+        width: 150px;
+        border-radius: 4px;
+        outline: none;
+      }
+    }
+  }
+  .place_order_button{
+    margin: 10px;
+    background: $secondaryColor;
+    color: white;
+    float: right;
+    padding: 10px 40px;
+    font-size: 1.7rem;
+    border-radius: 2px;
+  }
+}
+////////////////////////////////////////////////////////
+/////////////////////// section:cart_product //////////////////////
+////////////////////////////////////////////////////////
+#cart_product {
+  margin-top: 10px;
+  padding: 5px;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  .image_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .product_img {
+      width: 130px;
+      height: 150px;
+    }
+    .quantity_section {
+      button {
+        padding: 3px 5px;
+        border-radius: 50%;
+        border: 1px solid silver;
+        cursor: pointer;
+        outline: none;
+      }
+      input {
+        width: 40px;
+        margin: 8px 4px;
+        outline: none;
+        padding-left: 7px;
+      }
     }
   }
 }

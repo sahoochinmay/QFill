@@ -7,6 +7,7 @@ import NavBar from "../component/NavBar";
 import ProductOne from "../component/ProductOne";
 import Main from "./Main";
 import ProductDetailsOne from "../component/ProductDetailsOne";
+import Cart from "./Cart";
 
 const Home = () => {
   const history = useHistory();
@@ -46,6 +47,7 @@ const Home = () => {
           <Switch>
               <Route exact path="/home/" component={Main} />
               <Route exact path="/home/details" component={ProductDetailsOne} />
+              <Route exact path="/home/cart" component={Cart} />
           </Switch>
       </Router>
       <button
