@@ -1001,6 +1001,32 @@ nav {
     font-size: 1.7rem;
     border-radius: 2px;
   }
+  .price_details{
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    .title{
+      font-size: 2rem;
+      color: rgb(83, 83, 83);
+    }
+    p{
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+    hr{
+      margin-top: 5px;
+    }
+    span{
+      float: right;
+    }
+    .total_amount{
+      font-weight: bold;
+    }
+    .saving{
+      color: green;
+      font-weight: 500;
+    }
+  }
 }
 ////////////////////////////////////////////////////////
 /////////////////////// section:cart_product //////////////////////
@@ -1008,7 +1034,6 @@ nav {
 #cart_product {
   margin-top: 10px;
   padding: 5px;
-  border-top: 1px solid silver;
   border-bottom: 1px solid silver;
   .image_section {
     display: flex;
@@ -1021,17 +1046,18 @@ nav {
     }
     .quantity_section {
       button {
-        padding: 3px 5px;
+        padding: 0 5px;
         border-radius: 50%;
         border: 1px solid silver;
         cursor: pointer;
         outline: none;
+        background: none;
       }
       input {
         width: 40px;
         margin: 8px 4px;
         outline: none;
-        padding-left: 7px;
+        padding-left: 14px;
       }
     }
   }

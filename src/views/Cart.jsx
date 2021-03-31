@@ -14,7 +14,7 @@ const Cart = () => {
             marginRight: "30px",
           }}
           component={Paper}
-          elevation={1}
+          elevation={3}
         >
           <section className="cart_top">
             <h1
@@ -35,58 +35,33 @@ const Cart = () => {
             </section>
           </section>
           <CartProduct />
+          <CartProduct />
           <Button className="place_order_button">Place Order</Button>
         </Grid>
-        <Grid item xs={4} >
-            <Paper elevation={1} style={{
-                padding:"20px"
-            }}>   
-                <h1>PRICE DETAILS</h1>
-          <hr />
-          <p>
-            Price (1 item)
-            <span
-              style={{
-                float: "right",
-              }}
-            >
-              ₹995
-            </span>
-          </p><p>
-          Discount
-
-            <span
-              style={{
-                float: "right",
-              }}
-            >
-             − ₹398
-            </span>
-          </p><p>
-          Delivery Charges
-            <span
-              style={{
-                float: "right",
-              }}
-            >
-              FREE
-            </span>
-          </p>
-          <hr/>
-          <p>
-          Total Amount
-            <span
-              style={{
-                float: "right",
-              }}
-            >
-             ₹597
-            </span>
-          </p>
-          <hr/>
-          <p>You will save ₹398 on this order</p>
-            </Paper>
-          
+        <Grid item xs={4}>
+          <Paper elevation={3} className="price_details">
+            <h1 className="title">PRICE DETAILS</h1>
+            <hr />
+            <p>
+              Price (1 item)
+              <span>₹995</span>
+            </p>
+            <p>
+              Discount
+              <span>− ₹398</span>
+            </p>
+            <p>
+              Delivery Charges
+              <span>FREE</span>
+            </p>
+            <hr />
+            <p className="total_amount">
+              Total Amount
+              <span>₹597</span>
+            </p>
+            <hr />
+            <p className="saving">You will save ₹398 on this order</p>
+          </Paper>
         </Grid>
       </Grid>
     </section>

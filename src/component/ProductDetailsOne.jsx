@@ -68,7 +68,12 @@ const ProductDetailsOne = (props) => {
           </section>
           <p className="stock">Only {data?.stock} left in stock.</p>
           <section className="buttons">
-            <Button className="cart_button button"> <ShoppingCart className="icon" />Add To Cart</Button>
+            <Button className="cart_button button" onClick={() =>{
+              history.push({
+                pathname: "/home/cart",
+                data: data
+              })
+            }} > <ShoppingCart className="icon" />Add To Cart</Button>
             <Button className="buy_button button"><FlashOn className="icon" />Buy Now</Button>
           </section>
         </Grid>

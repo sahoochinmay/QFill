@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import { Grid , Button} from "@material-ui/core";
 import img from "../assets/images/s2p1.png";
 
 const CartProduct = () => {
+  const [productCount ,setProductCount] = useState(1)
   return (
     <section id="cart_product">
       <Grid container>
@@ -11,7 +12,7 @@ const CartProduct = () => {
             <img src={img} className="product_img" alt="" />
             <section className="quantity_section">
               <button>-</button>
-              <input type="number" min="1" max="9" />
+              <input type="number" value={productCount} min="1" max="9" />
               <button>+</button>
             </section>
           </section>
