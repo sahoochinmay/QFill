@@ -1,17 +1,16 @@
-import React from 'react'
+import React from "react";
 import ProductOne from "../component/ProductOne";
-
+import products from "../utils/products.json";
 
 const Main = () => {
-    return (
-        <div>
-            {/* section: home first */}
+  return (
+    <section>
+      {/* section: home first */}
+      {products.map((p) => {
+        return <ProductOne data={p} />;
+      })}
+    </section>
+  );
+};
 
-      <ProductOne />
-      <ProductOne />
-      <ProductOne />
-        </div>
-    )
-}
-
-export default Main
+export default Main;

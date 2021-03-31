@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Induscraft Sheesham Wood Solid Wood 4 Seater Dining Set ",
+    "description": "1.Total seating capacity is 4. 2.Oval shaped dining table. 3.Table (W x H x D): 129 cm x 76 cm x 93 cm (4 ft 2 in x 2 ft 5 in x 3 ft).",
+    "price": "42785",
+    "discount": "38236",
+    "brand": "Induscraft",
+    "rating": "3.9",
+    "total_rating": 30,
+    "stock": "2",
+    "category": "Dining Set",
+    "img":["https://i.imgur.com/mmffvti.jpg","https://i.imgur.com/wFYQjzS.jpg","https://i.imgur.com/jGKadA1.jpg"]
+  },
+  {
+    "title": "PRITI Solid Wood Office Table Solid Wood Office Table ",
+    "description": "Modern concise appearance: With modern concise look it can fit perfectly into your home. It will be the ideal furniture for your home or workplace whether in study, bedroom, living room, office, or other places. Space-saving folding design: The 4NM computer desk can be folded freely. You can fold or unfold it in a few seconds without any assembly. With its folding design, it only takes up a small space, which can save your space. Rugged material: The panel of the desk is made up of high-quality particleboard and strong iron frame so as to ensure stable structure and robust quality.The desk is beautiful and elegant with quality assurance. Convenience without assembly: There is no need to put together the desk.You can use it immediately the moment you unpack it. It can free your hands and brain by eliminating complicated assembly process comparing with other desks.",
+    "price": "6700",
+    "discount": "3599",
+    "brand": "PRITI",
+    "rating": "4.8",
+    "stock": "6",
+    "total_rating": "10",
+    "category": "Office Table",
+    "img": ["https://i.imgur.com/H4BLAB9.jpg","https://i.imgur.com/wFHqJkX.jpg","https://i.imgur.com/FzexWfc.jpg"]
+  }
+]
