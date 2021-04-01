@@ -507,6 +507,7 @@ nav {
   padding: 0.6rem 1.8rem;
   z-index: 99;
   #logo {
+    cursor: pointer;
     & img {
       display: inline-block;
       width: 250px;
@@ -525,6 +526,7 @@ nav {
       justify-content: center;
       margin-right: 2rem;
       li {
+        cursor: pointer;
         list-style: none;
         margin: 0 1.2rem;
         padding: 0 0.4rem;
@@ -584,21 +586,26 @@ nav {
       display: flex;
       align-items: center;
       .cartSecs {
+        cursor: pointer;
         text-align: center;
-        margin: 5px 10px 0;
+        margin: 5px 5px 0 10px;
         .cartIcon {
           font-size: 2rem;
           margin-top: 5px;
         }
         .text{
           margin-top: -5px;
+          font-weight: 500;
+          font-size: 1.4rem;
         }
       }
       .profileSec{
         display: flex;
+        cursor: pointer;
         padding: 5px;
         border: 1px solid silver;
         border-radius: 5px;
+        margin-left: 5px;
         .username{
           font-weight: 500;
           font-size: 1.6rem;
@@ -1039,6 +1046,13 @@ nav {
       font-weight: 500;
     }
   }
+  .empty_section{
+    margin-top: 20px;
+    padding: 50px 20px;
+    border: 1px dotted silver;
+    text-align: center;
+    color: silver;
+  }
 }
 ////////////////////////////////////////////////////////
 /////////////////////// section:cart_product //////////////////////
@@ -1072,6 +1086,27 @@ nav {
         padding-left: 14px;
       }
     }
+  }
+  .title{
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .seller{
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .detail_price{
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  .stock{
+    font-size: 1.4rem;
+  }
+  .remove_button{
+    text-transform: none;
+    font-size: 1.6rem;
+    margin-top: 5px;
+    box-shadow: 1px 1px 1px silver;
   }
 }
 ////////////////////////////////////////////////////////

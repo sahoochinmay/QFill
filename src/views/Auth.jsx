@@ -27,13 +27,12 @@ const Auth = () => {
   const classes = useStyles();
   const history = useHistory();
   const { isLoggedIn } = useSelector((state) => state.authReducer);
-  console.log(isLoggedIn);
   const [isSignIn, setIsSignIn] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userName, setUserName] = useState("");
   if (isLoggedIn) {
-    history.push("/home");
+    history.push("/home/");
     return <p>You are loggedin.</p>;
   }
   const handleSubmit = (e) => {

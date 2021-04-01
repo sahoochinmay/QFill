@@ -18,6 +18,7 @@ import slider3 from "../assets/images/slider3.jpg";
 import s2p1 from "../assets/images/s2p1.png";
 import s2p2 from "../assets/images/s2p2.png";
 import Footer from "../component/Footer";
+import NavBar from "../component/NavBar";
 
 const Landing = () => {
   const history = useHistory();
@@ -57,49 +58,7 @@ const Landing = () => {
           </div>
         </div>
         <img src={sliderSelect} alt="slider" id="image" />
-        <nav id="navBar">
-          <div id="logo">
-            <img src={logo} alt="e-Barnali" id="imglogo" />
-          </div>
-          <div class="menuItems">
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Teracotta</a>
-              </li>
-              <li>
-                <a href="#">Kandhei</a>
-              </li>
-              <li>
-                <a href="#">Pot</a>
-              </li>
-              <li>
-                <a href="#">Chandua</a>
-              </li>
-            </ul>
-            <div class="searchBox">
-              <input type="search" name="" id="" placeholder="Search here..." />
-              <Search className="searchIcon" />
-            </div>
-            <div class="cart">
-              <div class="cartSecs">
-                <ShoppingCart className="cartIcon" />
-                <h3>Cart</h3>
-              </div>
-              <div
-                class="cartSecs"
-                onClick={() => {
-                  history.push("/auth");
-                }}
-              >
-                <Person className="cartIcon" />
-                <h3>LogIn</h3>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <NavBar />
       </section>
       {/* <!--- section: Second--> */}
       <section id="second">

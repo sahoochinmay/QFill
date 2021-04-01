@@ -13,7 +13,6 @@ const Home = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { isLoggedIn } = useSelector((state) => state.authReducer);
-  console.log(isLoggedIn);
   if (!isLoggedIn) {
     history.push("/");
     return <p>Please Login!</p>;
@@ -46,8 +45,8 @@ const Home = () => {
       <Router>
           <Switch>
               <Route exact path="/home/" component={Main} />
-              <Route exact path="/home/details" component={ProductDetailsOne} />
-              <Route exact path="/home/cart" component={Cart} />
+              <Route exact path="/home/details/" component={ProductDetailsOne} />
+              <Route exact path="/home/cart/" component={Cart} />
           </Switch>
       </Router>
       <button

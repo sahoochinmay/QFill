@@ -12,19 +12,22 @@ import { useSelector } from "react-redux";
 const NavBar = () => {
   const history = useHistory();
   const { isLoggedIn, user } = useSelector((state) => state.authReducer);
-  console.log(user);
-  console.log(isLoggedIn);
   return (
     <nav id="navBar">
       <div id="logo">
-        <img src={logo} alt="e-Barnali" id="imglogo" />
+        <img
+          src={logo}
+          onClick={() => history.push("/")}
+          alt="e-Barnali"
+          id="imglogo"
+        />
       </div>
       <div class="menuItems">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a onClick={() => history.push("/home/")}>Home</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#">Teracotta</a>
           </li>
           <li>
@@ -35,36 +38,41 @@ const NavBar = () => {
           </li>
           <li>
             <a href="#">Chandua</a>
-          </li>
+          </li> */}
         </ul>
         <div class="searchBox">
           <input type="search" name="" id="" placeholder="Search here..." />
           <Search className="searchIcon" />
         </div>
         <div className="cart">
-          <section class="cartSecs">
+          <section
+            className="cartSecs"
+            onClick={() => {
+              isLoggedIn ? history.push("/home/cart/") : history.push("/auth/");
+            }}
+          >
             <ShoppingCart className="cartIcon" />
-            <p className="text" >Cart</p>
+            <p className="text">Cart</p>
           </section>
           {!isLoggedIn ? (
             <section
-              class="cartSecs"
+              className="cartSecs"
               onClick={() => {
-                history.push("/auth");
+                history.push("/auth/");
               }}
             >
               <Person className="cartIcon" />
-              <h3>LogIn</h3>
+              <p className="text">LogIn</p>
             </section>
           ) : (
             <section
               class="profileSec"
               onClick={() => {
-                history.push("/profile");
+                history.push("/profile/");
               }}
             >
               <AccountCircle className="profileIcon" />
-              <p  className="username" >{user?.userName}</p>
+              <p className="username">{user?.userName}</p>
             </section>
           )}
         </div>

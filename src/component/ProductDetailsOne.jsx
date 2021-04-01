@@ -19,8 +19,8 @@ const ProductDetailsOne = (props) => {
   const history = useHistory()
   const dispatch = useDispatch()
   const data = props?.location?.data;
+  const {user} = useSelector(state => state.authReducer)
   const {cartProduct} = useSelector(state => state.cartReducer)
-  console.log(cartProduct);
   const [selectImg, setSelectImg] = useState(data?.img[0]);
   const [descriptionLength ,setDescriptionLength] = useState(350)
   if(data === undefined){
@@ -30,7 +30,10 @@ const ProductDetailsOne = (props) => {
     return string?.length > n ? string.substr(0, n - 1) + `...` : string;
   }
   const handleAddToCart = () =>{
-
+      dispatch(AddToCart({
+        uid: user?._id,
+        data:data
+      }))
   }
   return (
     <section id="productDetailsOne">
@@ -58,12 +61,12 @@ const ProductDetailsOne = (props) => {
         </Grid>
         <Grid item xs={5}>
           <p className="detail_title">{data?.title}</p>
-          <p className="brand_name">Brand: {data?.brand}</p>
+          <p className="brand_name">Brand: {data?.seller}</p>
           <p className="description">{truncate(data?.description,descriptionLength)}</p>
           <p className="category">{data?.category}</p>
           <p className="detail_price">
-            ₹ {data?.price}&nbsp;&nbsp;&nbsp;&nbsp;
-            <strike>₹ {data?.discount}</strike>
+            ₹ {data?.discount}&nbsp;&nbsp;&nbsp;&nbsp;
+            <strike>₹ {data?.price}</strike>
           </p>
           <section className="ratingSection">
             <Rating
@@ -76,12 +79,7 @@ const ProductDetailsOne = (props) => {
           </section>
           <p className="stock">Only {data?.stock} left in stock.</p>
           <section className="buttons">
-            <Button className="cart_button button" onClick={() =>{
-              history.push({
-                pathname: "/home/cart",
-                data: data
-              })
-            }} > <ShoppingCart className="icon" />Add To Cart</Button>
+            <Button className="cart_button button" onClick={handleAddToCart} > <ShoppingCart className="icon" />Add To Cart</Button>
             <Button className="buy_button button"><FlashOn className="icon" />Buy Now</Button>
           </section>
         </Grid>

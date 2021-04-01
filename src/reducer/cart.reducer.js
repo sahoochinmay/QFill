@@ -1,9 +1,9 @@
-import {ADD_TO_CART , REMOVE_FROM_CART  , PLACE_ORDER} from '../constant/cart.constant'
+import {ADD_TO_CART , REMOVE_FROM_CART  , PLACE_ORDER , RELOAD_CART} from '../constant/cart.constant'
 
 const initialState = {
-    cartProduct:[]
+    cartProduct:[],
+    reload: false
 }
-
 
 const cartReducer = (state = initialState , action) => {
     const {type , payload} = action
@@ -15,6 +15,10 @@ const cartReducer = (state = initialState , action) => {
         case REMOVE_FROM_CART:
             return {
                 ...state, cartProduct: payload
+            }
+        case RELOAD_CART:
+            return{
+                ...state, reload: !state?.reload
             }
         default:
             return state;

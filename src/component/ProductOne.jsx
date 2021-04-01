@@ -10,7 +10,7 @@ const ProductOne = ({ data }) => {
       id="productOne"
       onClick={() =>
         history.push({
-          pathname: "/home/details",
+          pathname: "/home/details/",
           data: data,
         })
       }
@@ -28,7 +28,7 @@ const ProductOne = ({ data }) => {
       </section>
 
       <p className="price">
-        ₹{data?.price} <strike>₹{data?.discount}</strike>
+        ₹{data?.discount} <strike>₹{data?.price}</strike>
       </p>
       <p className="desc">
         FREE Delivery <br />

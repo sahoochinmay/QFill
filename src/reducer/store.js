@@ -8,7 +8,7 @@ import {persistReducer } from 'redux-persist'
 import authReducer from './auth.reducer'
 import globalReducer from './global.reducer'
 import cartReducer from './cart.reducer'
-const reducers =persistReducer({storage: storage,key:'pq' }, combineReducers({
+const reducers =persistReducer({storage: storage,key:'la' }, combineReducers({
   authReducer,
   globalReducer,
   cartReducer

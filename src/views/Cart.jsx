@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Paper, Button } from "@material-ui/core";
 import map from "../assets/images/map.png";
 import CartProduct from "../component/CartProduct";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCart } from "../action/cart.action";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.authReducer);
+  const { cartProduct, reload } = useSelector((state) => state.cartReducer);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [discountPrice, setDiscountPrice] = useState(0)
+  useEffect(() => {
+    dispatch(fetchCart(user?._id));
+  }, [reload]);
+  useEffect(() => {
+    handlePriceDetail();
+  }, [cartProduct]);
+  const handlePriceDetail = () => {
+    let tPrice = 0;
+    let dPrice = 0;
+    cartProduct.forEach((data) => {
+      console.log(data?.price);
+      tPrice = tPrice + data?.price;
+      let differ = data?.price - data?.discount
+      dPrice = dPrice + differ;
+    });
+    setTotalPrice(tPrice);
+    setDiscountPrice(dPrice)
+  };
   return (
     <section id="cart">
       <Grid container justify="center" spacing={3}>
@@ -23,7 +48,7 @@ const Cart = () => {
                 fontWeight: "500",
               }}
             >
-              My Cart(1)
+              My Cart({cartProduct.length})
             </h1>
             <section className="right_section">
               <img src={map} alt="" className="map" />
@@ -34,21 +59,29 @@ const Cart = () => {
               </select>
             </section>
           </section>
-          <CartProduct />
-          <CartProduct />
-          <Button className="place_order_button">Place Order</Button>
+
+          {cartProduct.map((data) => {
+            return <CartProduct data={data} />;
+          })}
+          {cartProduct.length === 0 ? (
+            <section className="empty_section">
+              <h1>No product added in the cart</h1>
+            </section>
+          ) : (
+            <Button className="place_order_button">Place Order</Button>
+          )}
         </Grid>
         <Grid item xs={4}>
           <Paper elevation={3} className="price_details">
             <h1 className="title">PRICE DETAILS</h1>
             <hr />
             <p>
-              Price (1 item)
-              <span>₹995</span>
+              Price ({cartProduct.length} item)
+              <span>₹{totalPrice}</span>
             </p>
             <p>
               Discount
-              <span>− ₹398</span>
+              <span>− ₹{discountPrice}</span>
             </p>
             <p>
               Delivery Charges
@@ -57,10 +90,10 @@ const Cart = () => {
             <hr />
             <p className="total_amount">
               Total Amount
-              <span>₹597</span>
+              <span>₹{totalPrice - discountPrice}</span>
             </p>
             <hr />
-            <p className="saving">You will save ₹398 on this order</p>
+            <p className="saving">You will save ₹{discountPrice} on this order</p>
           </Paper>
         </Grid>
       </Grid>

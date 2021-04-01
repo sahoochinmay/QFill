@@ -3,7 +3,7 @@ import {
   AUTH_SIGNOUT,
   AUTH_SIGNUP,
 } from "../constant/auth.constant";
-import { auth, db } from "../config/firebase";
+import { auth,userRef} from "../config/firebase";
 import { ShowAlert } from "./global.action";
 import { LOADING_END, LOADING_START } from "../constant/global.constant";
 
@@ -16,7 +16,7 @@ export const SignIn = (email, password) => (dispatch) => {
     .signInWithEmailAndPassword(email, password)
     .then((res) => {
       let id = res?.user?.uid;
-      db.collection("user")
+      userRef
         .doc(id)
         .get()
         .then((data) => {
@@ -66,8 +66,7 @@ export const SignUp = (email, password, userName) => (dispatch) => {
         email: res?.user?.email,
         userName: userName,
       };
-      console.log(user);
-      db.collection("user")
+      userRef
         .doc(id)
         .set({
           ...user,

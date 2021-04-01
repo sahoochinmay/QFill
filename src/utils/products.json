@@ -2,25 +2,170 @@
   {
     "title": "Induscraft Sheesham Wood Solid Wood 4 Seater Dining Set ",
     "description": "1.Total seating capacity is 4. 2.Oval shaped dining table. 3.Table (W x H x D): 129 cm x 76 cm x 93 cm (4 ft 2 in x 2 ft 5 in x 3 ft).",
-    "price": "42785",
-    "discount": "38236",
-    "brand": "Induscraft",
-    "rating": "3.9",
+    "price": 42785,
+    "discount": 38236,
+    "seller": "Induscraft",
+    "rating": 3.9,
     "total_rating": 30,
-    "stock": "2",
+    "stock":2,
     "category": "Dining Set",
-    "img":["https://i.imgur.com/mmffvti.jpg","https://i.imgur.com/wFYQjzS.jpg","https://i.imgur.com/jGKadA1.jpg"]
+    "img": [
+      "https://i.imgur.com/mmffvti.jpg",
+      "https://i.imgur.com/wFYQjzS.jpg",
+      "https://i.imgur.com/jGKadA1.jpg"
+    ]
   },
   {
     "title": "PRITI Solid Wood Office Table Solid Wood Office Table ",
     "description": "Modern concise appearance: With modern concise look it can fit perfectly into your home. It will be the ideal furniture for your home or workplace whether in study, bedroom, living room, office, or other places. Space-saving folding design: The 4NM computer desk can be folded freely. You can fold or unfold it in a few seconds without any assembly. With its folding design, it only takes up a small space, which can save your space. Rugged material: The panel of the desk is made up of high-quality particleboard and strong iron frame so as to ensure stable structure and robust quality.The desk is beautiful and elegant with quality assurance. Convenience without assembly: There is no need to put together the desk.You can use it immediately the moment you unpack it. It can free your hands and brain by eliminating complicated assembly process comparing with other desks.",
-    "price": "6700",
-    "discount": "3599",
-    "brand": "PRITI",
-    "rating": "4.8",
-    "stock": "6",
-    "total_rating": "10",
+    "price": 6700,
+    "discount": 3599,
+    "seller": "PRITI",
+    "rating": 4.8,
+    "stock": 6,
+    "total_rating": 10,
     "category": "Office Table",
-    "img": ["https://i.imgur.com/H4BLAB9.jpg","https://i.imgur.com/wFHqJkX.jpg","https://i.imgur.com/FzexWfc.jpg"]
+    "img": [
+      "https://i.imgur.com/H4BLAB9.jpg",
+      "https://i.imgur.com/wFHqJkX.jpg",
+      "https://i.imgur.com/FzexWfc.jpg"
+    ]
+  },
+  {
+    "title": "Fold - WFH Mobile Table",
+    "description": "Easy folding mechanism provided in the table, so that after your work is over, it can be folded and stacked vertically. Thus, the space can be mutli-used by everyone at home.",
+    "price": 12900,
+    "discount": 11500,
+    "seller": "Fold",
+    "rating": 5,
+    "total_rating": 25,
+    "stock": 8,
+    "category": "Study Table",
+    "id": "6495",
+    "img": [
+      "https://i.imgur.com/TekkrNk.png",
+      "https://i.imgur.com/vHrzzPo.jpg",
+      "https://i.imgur.com/EOZ5DcQ.jpg"
+    ]
+  },
+
+  {
+    "title": "Hamilton Nested Stools",
+    "description": "1.Perfect to optimise space in the house, keep them folded into 1 and when you need 3 stools, voila! 2.Extremely versatile, can be used as stool(s), centre table(s) , side table(s), small study table + stool for children",
+    "price": 10900,
+    "discount": 8700,
+    "seller": "Hamilton",
+    "rating": 3,
+    "total_rating": 13,
+    "stock": 6,
+    "category": "Stools",
+    "id": "1245",
+    "img": [
+      "https://i.imgur.com/w0TlIdl.jpg",
+      "https://i.imgur.com/Vp0CA4X.jpg",
+      "https://i.imgur.com/qDo8MN9.jpg"
+    ]
+  },
+
+  {
+    "title": "Devin Solidwood Study Table With Book Rack - Honey",
+    "description": "The Devin Solidwood Study Table With Book Rack is a stylish addition to your study or bedroom. It is made of kiln-dried and chemically treated Sheesham wood and is extremely strong and stable. The modern design features a book rack along the wall which leads to a horizontal study top supported by a vertical panel. The study top is 18 mm thick and has a length of 33.5 inches at 30 inches from the ground. The bookshelf has two columns as well as a ledge on the top. The study table has a warranty of one year.",
+    "price": 10900,
+    "discount": 8700,
+    "seller": "Devin",
+    "rating": 5,
+    "total_rating": 10,
+    "stock": 9,
+    "category": "Study Table",
+    "id": "6759",
+    "img": [
+      "https://i.imgur.com/q31oB31.jpg",
+      "https://i.imgur.com/Mnh4kL9.jpg"
+    ]
+  },
+
+  {
+    "title": "Octavia Coffee Table",
+    "description": "The awesome Octavia! The Octavia coffee table is a complete space saver. Pull out the stools when in need and tuck them away after the use. It's a total win-win situation with Octavia.​2. This coffee table is finely crafted from Sheesham wood that ensures long-lasting durability.​3. Swipe to check the three different finish options available in this unit.",
+    "price": 29000,
+    "discount": 13000,
+    "seller": "Octavia",
+    "rating": 4.8,
+    "total_rating": 7,
+    "stock": 7,
+    "category": "Coffee Table",
+    "id": "7484",
+    "img": [
+      "https://i.imgur.com/431EL4E.jpg",
+      "https://i.imgur.com/SQb62Ir.jpg",
+      "https://i.imgur.com/tCAzcwE.jpg"
+    ]
+  },
+
+  {
+    "title": "Vesta Coffee Table",
+    "description": "1. Vesta coffee table is a perfect combination of storage in style. It has three shelves at one side and it is further segmented with a panel below the table. Not just the table, but Vesta also has four small pouffes aligned with upholstered seats.2. This coffee table and pouffes are made in sheesham wood. The seats are upholstered. ​3. There are three finish options of honey, teak and walnut and the upholstered seat is in cream blossom fabric.",
+    "price": 33000,
+    "discount": 21900,
+    "seller": "Vesta",
+    "rating": 4.9,
+    "total_rating": 54,
+    "stock": 10,
+    "category": "Coffee Table",
+    "img": [
+      "https://i.imgur.com/jl9zbaI.jpg",
+      "https://i.imgur.com/vpp6VOW.jpg",
+      "https://i.imgur.com/O7E8LpQ.jpg"
+    ]
+  },
+
+  {
+    "title": "Winsley Fabric Sofa Cum Bed",
+    "description": "1. The simple design of Winsley futon bed can add charm and comfortable space to just chill at the end of the day. The different shade of the border makes it more appealing. 2. This futon bed is made from the premium quality of fabric to give comfortable seating space.3. It is available in different appealing colour options.",
+    "price": 13499,
+    "discount": 11900,
+    "seller": "Winsley",
+    "rating": 5,
+    "total_rating": 22,
+    "stock": 8,
+    "category": "Sofa cum Bed",
+    "id": "4680",
+    "img": [
+      "https://i.imgur.com/lrATih2.jpg",
+      "https://i.imgur.com/BvdwE7i.jpg",
+      "https://i.imgur.com/nMOvihK.jpg"
+    ]
+  },
+  {
+    "title": "Gary Kids Trundle Bed With Storage",
+    "description": "1. Gary trundle bed can be the multi-starrer in your room with its multiple features. This bed consists of a broad trundle below while it also has two drawers that are more useful. Finally, the design of it has an ever-lasting impact in the room. 2. The Sheesham wood making makes it much durable furniture. ​3. Click to know more about the numerous finishes available.",
+    "price": 55000,
+    "discount": 39800,
+    "seller": "Gary",
+    "rating": 4.9,
+    "total_rating": 17,
+    "stock": 9,
+    "category": "Kids Trundle Bed",
+    "img": [
+      "https://i.imgur.com/AZmvFKk.jpg",
+      "https://i.imgur.com/77ujmtR.jpg",
+      "https://i.imgur.com/P9M1LxJ.jpg"
+    ]
+  },
+
+  {
+    "title": "Darla Bunk Bed",
+    "description": "Embellishing Charm. Give your kid's bedroom a little chic and modish look using Darla Bunk Bed. This bunk bed has glistening headboard and steps to give protection to your child in night. Imperishable Luxury. The bunk bed is crafted beautifully using Sheesham wood. Excellent use of Honey Finish will surely add life to modern kid's bedroom. Give love to your kid with this extraordinary Bunk bed.NOTE: The display price does not include mattresses & other accessories.",
+    "price": 52900,
+    "discount": 42900,
+    "seller": "Darla",
+    "rating": 4.9,
+    "total_rating": 13,
+    "stock": 8,
+    "category": "Bunk Bed",
+    "img": [
+      "https://i.imgur.com/vrfkEQh.jpg",
+      "https://i.imgur.com/Jo2oO0u.jpg"
+    ]
   }
 ]
