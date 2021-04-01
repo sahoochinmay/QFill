@@ -45,8 +45,8 @@ const Home = () => {
       <Router>
           <Switch>
               <Route exact path="/home/" component={Main} />
-              <Route exact path="/home/details/" component={ProductDetailsOne} />
-              <Route exact path="/home/cart/" component={Cart} />
+              <Route exact path="/home/details" component={ProductDetailsOne} />
+              <Route exact path="/home/cart" component={Cart} />
           </Switch>
       </Router>
       <button

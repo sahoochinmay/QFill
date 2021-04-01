@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Button } from "@material-ui/core";
-import {
-  Search,
-  ShoppingCart,
-  Person,
-  LocalShipping,
-  Phone,
-  Security,
-  LocalOffer,
-} from "@material-ui/icons";
+import { LocalShipping, Phone, Security, LocalOffer } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
 // images
 import logo from "../assets/images/logo.png";
@@ -19,6 +11,11 @@ import s2p1 from "../assets/images/s2p1.png";
 import s2p2 from "../assets/images/s2p2.png";
 import Footer from "../component/Footer";
 import NavBar from "../component/NavBar";
+import LandingProduct from "../component/LandingProduct";
+// data
+import customize from "../utils/customize.json";
+import topselling from "../utils/topselling.json";
+import boxproduct from "../utils/boxproduct.json";
 
 const Landing = () => {
   const history = useHistory();
@@ -39,6 +36,9 @@ const Landing = () => {
   //   console.log("count", i);
   // }, 3000);
   // END: slider
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + `...` : string;
+  }
   return (
     <>
       {/* section:header */}
@@ -63,9 +63,10 @@ const Landing = () => {
       {/* <!--- section: Second--> */}
       <section id="second">
         <Grid container>
+          <Grid item xs={1}></Grid>
           <Grid item xs={3}>
             <div class="textWrapper">
-              <h1>e-B@RNALI</h1>
+              <h1>QFill</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Eligendi, et deleniti distinctio, totam, dolores voluptatibus
@@ -73,12 +74,12 @@ const Landing = () => {
               </p>
             </div>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={7}>
             <div class="imageWrapper">
               <div class="shade"></div>
               <iframe
-                width="560"
-                height="315"
+                width="100%"
+                height="355"
                 src="https://www.youtube.com/embed/BKMQLt_j_Zo?controls=0&amp;showinfo=0&amp;autoplay=1"
                 frameborder="0"
                 allow="accelerometer; autoplay; loop=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -88,26 +89,100 @@ const Landing = () => {
               {/* <img src="images/mdbg.jpg" alt="" srcset=""> */}
             </div>
           </Grid>
-          <Grid item xs={3}>
-            <div class="brandsWrapper">
-              <h2>Top Products</h2>
-              <div class="products">
-                <div class="img1">
-                  <img src={s2p1} alt="" srcset="" />
-                  <h5>Pot</h5>
-                </div>
-                <div class="img2">
-                  <img src={s2p2} alt="" srcset="" />
-                  <h5>Khelana</h5>
-                </div>
-              </div>
-              <Button className="exploreBtn">Explore More ▶</Button>
+        </Grid>
+      </section>
+
+      {/* section: third */}
+      <section id="third">
+        <h1 className="heading">Top Selling</h1>
+        <Grid container>
+          {topselling.map((prod) => {
+            return (
+              <Grid item xs={4}>
+                <LandingProduct data={prod} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </section>
+ 
+      {/* section: six */}
+      <section id="sixth">
+        <Grid container direction="row" justify="center">
+          <Grid item xs={7}>
+            <div class="leftFirst">
+              <h3 id="blackHeading">Hamilton Nested Stools</h3>
+
+              <pre class="leftp">
+                Perfect to optimise space in the house ...
+              </pre>
+
+              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
+            </div>
+          </Grid>
+          <Grid
+            item
+            xs={4}
+            style={{
+              marginLeft: "20px",
+            }}
+          >
+            <div class="rightFirst">
+              <h3 id="whiteHeading">Table With Book Rack</h3>
+
+              <pre class="leftp">Solidwood Study Table With Book Rack.</pre>
+
+              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
+            </div>
+          </Grid>
+        </Grid>
+        <Grid container direction="row" justify="center">
+          <Grid
+            item
+            xs={4}
+            style={{
+              marginRight: "20px",
+            }}
+          >
+            <div class="leftSecond">
+              <h3 id="whiteHeading">Storage Stool</h3>
+
+              <pre class="leftp">Dressing Table With Storage Stool.</pre>
+
+              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
+            </div>
+          </Grid>
+          <Grid item xs={7}>
+            <div class="rightSecond">
+              <h3 id="blackHeading">Retica Wall Shelf</h3>
+              <pre class="leftp">Serve stunning beauty and functionality.</pre>
+              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
             </div>
           </Grid>
         </Grid>
       </section>
-      {/* section: third */}
-      <section id="third"></section>
+
+      {/* section: seven */}
+      <section id="seven">
+        <h1 className="title">
+          If you can Imagine it? <span>We can Make it!</span>
+        </h1>
+        <Grid container direction="row" justify="center">
+          {customize.map((data) => {
+            return (
+              <Grid item xs={3}>
+                <section className="grid">
+                  <img src={data?.img} alt="" />
+                  <h1>{data?.title}</h1>
+                  <p>{data?.description}</p>
+                </section>
+              </Grid>
+            );
+          })}
+        </Grid>
+        <Button className="button">Customize Now</Button>
+      </section>
+
       {/* section: fourth */}
       <section id="fourth">
         <Grid container>
@@ -149,85 +224,32 @@ const Landing = () => {
           </Grid>
         </Grid>
       </section>
+
       {/* section: five */}
       <section id="fifth">
         <Grid container>
-          <Grid xs={4}>
-            <div class="cardWrapper">
-              <p>low prices guarantee</p>
-              <h3>Mega Sale</h3>
-              <Button variant="contained" className="secButton">
-                Shop Now
-              </Button>
-            </div>
-          </Grid>
-          <Grid xs={4}>
-            <div class="cardWrapper">
-              <p>power tools of next level</p>
-              <h3>Wheels Rim</h3>
-              <Button variant="contained" className="secButton">
-                Shop Now
-              </Button>
-            </div>
-          </Grid>
-          <Grid xs={4}>
-            <div class="cardWrapper">
-              <p>for any vehicles</p>
-              <h3>Body Parts</h3>
-              <Button variant="contained" className="secButton">
-                Shop Now
-              </Button>
-            </div>
-          </Grid>
+          {boxproduct.map((data) => {
+            return (
+              <Grid xs={4}>
+                <div
+                  class="cardWrapper"
+                  style={{
+                    background: `linear-gradient( to right,rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.19)),url(${data?.img[0]})`,
+                    backgroundSize: "100% 100%",
+                  }}
+                >
+                  <p>{data?.msg}</p>
+                  <h3>{truncate(data?.title, 18)}</h3>
+                  <Button variant="contained" className="secButton">
+                    Shop Now
+                  </Button>
+                </div>
+              </Grid>
+            );
+          })}
         </Grid>
       </section>
-      {/* section: six */}
-      <section id="sixth">
-        <Grid container>
-          <Grid container>
-            <Grid xs={8}>
-              <div class="leftFirst">
-                <h3 id="blackHeading">Compy Beds</h3>
-
-                <pre class="leftp">Lorem ipsum dolor sit amet consectetur.</pre>
-
-                <a href="#">Explore</a>
-              </div>
-            </Grid>
-            <Grid xs={4}>
-              <div class="rightFirst">
-                <h3 id="whiteHeading">Compy Beds</h3>
-
-                <pre class="leftp">Lorem ipsum dolor sit amet consectetur.</pre>
-
-                <a href="#">Explore</a>
-              </div>
-            </Grid>
-          </Grid>
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="leftSecond">
-                <h3 id="whiteHeading">Compy Beds</h3>
-
-                <pre class="leftp">Lorem ipsum dolor sit amet consectetur.</pre>
-
-                <a href="#">Explore</a>
-              </div>
-            </div>
-
-            <div class="col-md-8">
-              <div class="rightSecond">
-                <h3 id="blackHeading">Compy Beds</h3>
-
-                <pre class="leftp">Lorem ipsum dolor sit amet consectetur.</pre>
-
-                <a href="#">Explore</a>
-              </div>
-            </div>
-          </div>
-        </Grid>
-      </section>
+ 
       {/* section: footer */}
       <Footer />
     </>

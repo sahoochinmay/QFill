@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Darla Bunk Bed",
+    "description": "Embellishing Charm. Give your kid's bedroom a little chic and modish look using Darla Bunk Bed. This bunk bed has glistening headboard and steps to give protection to your child in night. Imperishable Luxury. The bunk bed is crafted beautifully using Sheesham wood. Excellent use of Honey Finish will surely add life to modern kid's bedroom. Give love to your kid with this extraordinary Bunk bed.NOTE: The display price does not include mattresses & other accessories.",
+    "price": 52900,
+    "discount": 42900,
+    "seller": "Darla",
+    "rating": 4.9,
+    "total_rating": 13,
+    "stock": 8,
+    "category": "Bunk Bed",
+    "img": [
+      "https://i.imgur.com/vrfkEQh.jpg",
+      "https://i.imgur.com/Jo2oO0u.jpg"
+    ],
+    "msg": "Designers understand your"
+  },
+  {
+    "title": "Cohoon 4 Seater Dining Set",
+    "description": "1. Cohoon four-seater dining set can brighten up the meal time and creates a striking look with its simple style. Its table is broad and with legs that centralize the furniture. It is edged with curvy patterns beneath that enhance the look of the table. The dining set is complete with four chairs with adjoining backrests that cover the four adjacent corners of the table. 2. This four-seater dining set is made up of high-grade Sheesham wood, which promises a long life. 3. To lamp-up dining interiors, this unit is available in different beautiful finish options of honey, teak and walnut.",
+    "price": 65999,
+    "discount": 45000,
+    "seller": "Cohoon",
+    "rating": 5,
+    "total_rating": 13,
+    "stock": 9,
+    "category": "Dining Set",
+    "id": "5840",
+    "img": [
+      "https://i.imgur.com/kRAABQQ.jpg",
+      "https://i.imgur.com/si5qkrc.jpg",
+      "https://i.imgur.com/u7CWQtF.jpg"
+    ],
+    "msg": "Low prices guarantee"
+  },
+
+  {
+    "title": "Walken Single Bed With Storage",
+    "description": "1. Walken bed with storage is very convenient furniture to invite in the bedroom. Firstly, it is contemporary furniture design. Secondly, the backrest has two drop-down drawers, and each of those has an upholstered panel for more comfort. Thirdly, headboard and drawer storage provide spacious places to store more. 2. Sheesham wood crafting of the bed makes it very durable. ​3. Along with it, honey and walnut finish options increase the variety to pick from.",
+    "price": 62999,
+    "discount": 48999,
+    "seller": "Walken",
+    "rating": 5,
+    "total_rating": 18,
+    "stock": 9,
+    "category": "Bed",
+    "id": "9997",
+    "img": [
+      "https://i.imgur.com/0NP4f2E.jpg",
+      "https://i.imgur.com/J6XOC6Z.jpg",
+      "https://i.imgur.com/ari4ZzF.jpg"
+    ],
+    "msg": "ensured to deliver it on time."
+  }
+]

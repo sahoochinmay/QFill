@@ -7,7 +7,7 @@
     "seller": "Induscraft",
     "rating": 3.9,
     "total_rating": 30,
-    "stock":2,
+    "stock": 2,
     "category": "Dining Set",
     "img": [
       "https://i.imgur.com/mmffvti.jpg",
@@ -166,6 +166,148 @@
     "img": [
       "https://i.imgur.com/vrfkEQh.jpg",
       "https://i.imgur.com/Jo2oO0u.jpg"
+    ]
+  },
+  {
+    "title": "Cohoon 4 Seater Dining Set",
+    "description": "1. Cohoon four-seater dining set can brighten up the meal time and creates a striking look with its simple style. Its table is broad and with legs that centralize the furniture. It is edged with curvy patterns beneath that enhance the look of the table. The dining set is complete with four chairs with adjoining backrests that cover the four adjacent corners of the table. 2. This four-seater dining set is made up of high-grade Sheesham wood, which promises a long life. 3. To lamp-up dining interiors, this unit is available in different beautiful finish options of honey, teak and walnut.",
+    "price": 65999,
+    "discount": 45000,
+    "seller": "Cohoon",
+    "rating": 5,
+    "total_rating": 13,
+    "stock": 9,
+    "category": "Dining Set",
+    "id": "5840",
+    "img": [
+      "https://i.imgur.com/kRAABQQ.jpg",
+      "https://i.imgur.com/si5qkrc.jpg",
+      "https://i.imgur.com/u7CWQtF.jpg"
+    ]
+  },
+
+  {
+    "title": "Walken Single Bed With Storage",
+    "description": "1. Walken bed with storage is very convenient furniture to invite in the bedroom. Firstly, it is contemporary furniture design. Secondly, the backrest has two drop-down drawers, and each of those has an upholstered panel for more comfort. Thirdly, headboard and drawer storage provide spacious places to store more. 2. Sheesham wood crafting of the bed makes it very durable. ​3. Along with it, honey and walnut finish options increase the variety to pick from.",
+    "price": 62999,
+    "discount": 48999,
+    "seller": "Walken",
+    "rating": 5,
+    "total_rating": 18,
+    "stock": 9,
+    "category": "Bed",
+    "id": "9997",
+    "img": [
+      "https://i.imgur.com/J6XOC6Z.jpg",
+      "https://i.imgur.com/ari4ZzF.jpg",
+      "https://i.imgur.com/0NP4f2E.jpg"
+    ]
+  },
+
+  {
+    "title": "Paul 2 Seater Dining Set",
+    "description": "Cleaning Technique Wipe off the dirt from the furniture with a soft cotton cloth. Also avoid using the excess water for cleaning, take moistened cloth to wipe off the dirt.Avoid ChemicalsAvoid chemical contact with the furniture as it may harm the natural finish and further the durability. Also, make sure to avoid application of polyurethane paints on the furniture.Scratch & Burn Remedy Scratches, burns, residue and any other surface damage can be taken off with a fine-grit sandpaper. Reapply mineral oil after sanding.",
+    "price": 37899,
+    "discount": 25999,
+    "seller": "Paul",
+    "rating": 5,
+    "total_rating": 20,
+    "stock": 9,
+    "category": "Dining Set",
+    "id": "7788",
+    "img": [
+      "https://i.imgur.com/NKMluS0.jpg",
+      "https://i.imgur.com/ynNL4nF.jpg",
+      "https://i.imgur.com/hyHjgC8.jpg"
+    ]
+  },
+
+  {
+    "title": "Zadran Study Table",
+    "description": "1. Zadran study table is a low height study table for making the working hours better while just sitting on the bed. The foldable study unit has drawers for storage and the table is itself as broad as a usual study. 2. Made up of Sheesham, the furniture is unquestionable with quality. 3. With it, there are so many finish options of honey and walnut to choose from.",
+    "price": 6499,
+    "discount": 4899,
+    "seller": "Zadran",
+    "rating": 4.9,
+    "total_rating": 12,
+    "stock": 8,
+    "category": "Study Table",
+    "id": "8998",
+    "img": [
+      "https://i.imgur.com/FxzjKfJ.jpg",
+      "https://i.imgur.com/G7jpZpY.jpg",
+      "https://i.imgur.com/RX6luiY.jpg"
+    ]
+  },
+
+  {
+    "title": "Holger Foldable Wall Mounted Table",
+    "description": "1. Holger study table is a smart-piece that enables you to work comfortably. The convertible fold-out feature when unfolded, provides storage space to house all your essentials with ease. 2. It is finely crafted from premium-quality Sheesham wood. ​3. Three finish options available in this are honey, walnut and teak.",
+    "price": 18779,
+    "discount": 12999,
+    "seller": "Holger",
+    "rating": 5,
+    "total_rating": 13,
+    "stock": 6,
+    "category": "Wall Mounted Table",
+    "id": "6787",
+    "img": [
+      "https://i.imgur.com/jz6xz1n.jpg",
+      "https://i.imgur.com/mcydc05.jpg",
+      "https://i.imgur.com/B5SToVB.jpg"
+    ]
+  },
+
+  {
+    "title": "Featherlite Flip Computer Table",
+    "description": "The Flip Table is designed to make sure your work life doesn’t interfere with your home life. Easily Foldable and portable, the Flip Table ensures that no space is wasted, and allows you to transform your home space to a workspace and vice versa, quickly and easily. It comes with thanasu maple tabletop (18mm particle board), dark grey MS powder coated structure, foldable when not in use, 50mm castors for easy mobility, levelers adjustable up to 15 mm and shelf for additional storage.",
+    "price": 8999,
+    "discount": 6999,
+    "seller": "Featherlite",
+    "rating": 5,
+    "total_rating": 9,
+    "stock": 7,
+    "category": "Computer Table",
+    "id": "4546",
+    "img": [
+      "https://i.imgur.com/g02L6yU.jpg",
+      "https://i.imgur.com/LqCN8xU.jpg",
+      "https://i.imgur.com/KNS9Iwq.jpg"
+    ]
+  },
+
+  {
+    "title": "Retica Wall Shelf",
+    "description": "1. Bring a new era of décor in your home with the Retica wall shelf to serve stunning beauty and functionality. It has a combination of the finest wooden planks for bold confidence that is hard to find. This expertly crafted wall shelf features ten shelves to organize your essentials. 2. Crafted from Sheesham wood to impart sturdiness and long-lastingness. ​3. Smooth and stunning finish options to fit in every style of interiors.",
+    "price": 5499,
+    "discount": 3999,
+    "seller": "Retica",
+    "rating": 5,
+    "total_rating": 20,
+    "stock": 8,
+    "category": "Wall Shelf",
+    "id": "2458",
+    "img": [
+      "https://i.imgur.com/gtOt5Yj.jpg",
+      "https://i.imgur.com/blbyaeQ.jpg",
+      "https://i.imgur.com/E75Yvic.jpg"
+    ]
+  },
+
+  {
+    "title": "Adolph Dressing Table With Storage Stool",
+    "description": "1. Adolph dressing unit reflects the all-time classiness and comes with a fair share of mirror and storage. The easy to pull out drawers are perfect to keep your everyday essentials. 2. It is finely crafted from premium-quality Sheesham wood. 3. The three finish options available in this are honey,walnut and teak.",
+    "price": 36999,
+    "discount": 24999,
+    "seller": "Adolph",
+    "rating": 4.9,
+    "total_rating": 12,
+    "stock": 9,
+    "category": "Dressing Table",
+    "img": [
+      "https://i.imgur.com/tGus5P3.jpg",
+      "https://i.imgur.com/iJ0gt4J.jpg",
+      "https://i.imgur.com/ULdzxV4.jpg"
     ]
   }
 ]

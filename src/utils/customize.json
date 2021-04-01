@@ -1,0 +1,22 @@
+[
+    {
+        "img":"https://i.imgur.com/Ii1FKDN.png",
+        "title": "Share your Idea",
+        "description": "Our furniture designers understand your requirements closely to craft a perfect piece."
+    },
+    {
+        "img": "https://i.imgur.com/LVJ4UO3.png",
+        "title": "Designing",
+        "description": "Your idea is converted into a workable 3D design for further approvals and confirmations."
+    },
+    {
+        "img": "https://i.imgur.com/7A3xcBM.png",
+        "title": "Manufacturing",
+        "description": "As soon as our team receives the confirmation, manufacturing is initiated for your custom furniture."
+    },
+    {
+        "img": "https://i.imgur.com/HIeM1yr.png",
+        "title": "Delivery",
+        "description": "Each custom order is treated with high priority & we ensured to deliver it on time."
+    }
+]

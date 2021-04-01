@@ -593,26 +593,26 @@ nav {
           font-size: 2rem;
           margin-top: 5px;
         }
-        .text{
+        .text {
           margin-top: -5px;
           font-weight: 500;
           font-size: 1.4rem;
         }
       }
-      .profileSec{
+      .profileSec {
         display: flex;
         cursor: pointer;
         padding: 5px;
         border: 1px solid silver;
         border-radius: 5px;
         margin-left: 5px;
-        .username{
+        .username {
           font-weight: 500;
           font-size: 1.6rem;
         }
-        .profileIcon{
+        .profileIcon {
           //  margin-top: 5px;
-           font-size: 2.5rem;
+          font-size: 2.5rem;
         }
       }
     }
@@ -622,7 +622,7 @@ nav {
 ///////////////////////  section: second//////////////////////
 ////////////////////////////////////////////////////////
 #second {
-  padding: 10rem 5rem 8rem 5rem;
+  padding: 10rem 2rem 8rem 5rem;
   .textWrapper {
     position: relative;
     top: 50%;
@@ -638,6 +638,8 @@ nav {
     }
   }
   .imageWrapper {
+    // border: 1px solid red;
+    margin-left: 20px;
     position: relative;
     // z-index: -1;
     // .shade {
@@ -653,47 +655,17 @@ nav {
       height: 100%;
     }
   }
-  .brandsWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    .products {
-      display: flex;
-      justify-content: space-evenly;
-      margin: 2rem 0 0 0;
-      img {
-        width: 10rem;
-        height: 12rem;
-      }
-      h5 {
-        margin: 2rem;
-        color: grey;
-        padding: 0.4rem 0.6rem;
-        border: transparent;
-        box-shadow: 0 0 1.7px 1px rgba(0, 0, 0, 0.315);
-      }
-    }
-    .exploreBtn {
-      display: inline-block;
-      margin: 2rem auto;
-      text-decoration: none;
-      color: grey;
-      font-size: 1rem;
-      border: 0.05rem solid black;
-      align-self: flex-start;
-      padding: 0.4rem 0.6rem;
-      border-radius: 2px;
-    }
-  }
 }
 ////////////////////////////////////////////////////////
 /////////////////////// section: third //////////////////////
 ////////////////////////////////////////////////////////
 #third {
+  padding: 0 50px;
+  .heading{
+    text-align: center;
+    font-size: 3.3rem;
+    margin-bottom: 60px;
+  }
 }
 ////////////////////////////////////////////////////////
 /////////////////////// section: fourth //////////////////////
@@ -730,13 +702,6 @@ nav {
 #fifth {
   padding: 5rem 6rem;
   .cardWrapper {
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.99),
-        rgba(0, 0, 0, 0.19)
-      ),
-      url(./assets/images/slider1.jpg);
-    background-size: cover;
     padding: 4rem 1.8rem;
     padding-left: 3rem;
     color: white;
@@ -769,60 +734,100 @@ nav {
 /////////////////////// section: six //////////////////////
 ////////////////////////////////////////////////////////
 #sixth {
-  padding: 5rem 0;
-
+  padding: 5rem 20px;
   #blackHeading {
     color: black;
     font-weight: bolder;
     font-size: 3rem;
   }
-
   #whiteHeading {
     color: white;
     font-weight: bolder;
     font-size: 3rem;
     text-shadow: 0 0 15px black;
   }
-
   pre {
     font-size: 1.4rem;
   }
-
-  a {
+  .button {
     padding: 0.4rem 1.8rem;
     border-radius: 0;
-    background: black;
+    background: $primaryColor;
     border: none;
+    color: white;
   }
-
   .leftFirst {
-    background: url(./assets/images/slider1.jpg);
-    background-size: cover;
+    background: url(https://i.imgur.com/w0TlIdl.jpg);
+    background-size: 100% 100%;
     padding: 4rem 1.8rem;
     padding-left: 3rem;
   }
-
   .rightFirst {
-    background: url(./assets/images/slider1.jpg);
+    background: url(https://i.imgur.com/q31oB31.jpg);
     background-size: cover;
     padding: 4rem 1.8rem;
     padding-left: 3rem;
+    color: white;
   }
-
   .leftSecond {
-    background: url(./assets/images/slider1.jpg);
-    background-size: cover;
+    background: url(https://i.imgur.com/tGus5P3.jpg);
+    background-size: 100% 100%;
     padding: 4rem 1.8rem;
     padding-left: 3rem;
     margin-top: 2rem;
+    color: white;
   }
 
   .rightSecond {
-    background: url(./assets/images/slider1.jpg);
-    background-size: cover;
+    background: url(https://i.imgur.com/gtOt5Yj.jpg);
+    background-size: 100% 100%;
     padding: 4rem 1.8rem;
     padding-left: 3rem;
     margin-top: 2rem;
+  }
+}
+////////////////////////////////////////////////////////
+/////////////////////// section: seven //////////////////////
+////////////////////////////////////////////////////////
+#seven{
+  margin: 30px 0 80px;
+  padding: 0px 50px 0px 50px;
+  position: relative;
+  .title{
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 500;
+    span{
+      font-weight: 600;
+    }
+  }
+  .grid{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    img{
+      margin-left: 50px;
+    }
+    h1{
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+  }
+  .button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    text-transform: none;
+    background: $primaryColor;
+    border-radius: 5px;
+    color: white;
   }
 }
 ////////////////////////////////////////////////////////
@@ -881,6 +886,31 @@ nav {
   }
   .desc {
     font-size: 1.2rem;
+  }
+}
+////////////////////////////////////////////////////////
+/////////////////////// section: productOne //////////////////////
+////////////////////////////////////////////////////////
+#landing_product{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+  img{
+    cursor: pointer;
+    width: 200px;
+    height: 190px;
+  }
+  .title{
+  cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .detail_price{
+    cursor: pointer;
+    font-size: 1.6rem;
   }
 }
 ////////////////////////////////////////////////////////
@@ -1011,7 +1041,7 @@ nav {
       }
     }
   }
-  .place_order_button{
+  .place_order_button {
     margin: 10px;
     background: $secondaryColor;
     color: white;
@@ -1020,33 +1050,33 @@ nav {
     font-size: 1.7rem;
     border-radius: 2px;
   }
-  .price_details{
+  .price_details {
     padding: 20px;
     width: 100%;
     max-width: 400px;
-    .title{
+    .title {
       font-size: 2rem;
       color: rgb(83, 83, 83);
     }
-    p{
+    p {
       font-size: 1.8rem;
       margin-top: 10px;
     }
-    hr{
+    hr {
       margin-top: 5px;
     }
-    span{
+    span {
       float: right;
     }
-    .total_amount{
+    .total_amount {
       font-weight: bold;
     }
-    .saving{
+    .saving {
       color: green;
       font-weight: 500;
     }
   }
-  .empty_section{
+  .empty_section {
     margin-top: 20px;
     padding: 50px 20px;
     border: 1px dotted silver;
@@ -1087,22 +1117,22 @@ nav {
       }
     }
   }
-  .title{
+  .title {
     font-size: 1.6rem;
     font-weight: 500;
   }
-  .seller{
+  .seller {
     font-size: 1.4rem;
     font-weight: 500;
   }
-  .detail_price{
+  .detail_price {
     font-size: 2rem;
     margin: 10px 0;
   }
-  .stock{
+  .stock {
     font-size: 1.4rem;
   }
-  .remove_button{
+  .remove_button {
     text-transform: none;
     font-size: 1.6rem;
     margin-top: 5px;
@@ -1137,6 +1167,7 @@ nav {
         border-radius: 50%;
         background: $primaryColor;
         padding: 4px;
+        cursor: pointer;
       }
     }
   }
@@ -1170,9 +1201,41 @@ nav {
     }
   }
   #fotterBottom {
+    justify-content: space-between;
+    position: relative;
     .copyRight {
-      color: white;
+      position: absolute;
+      left: 10px;
+      bottom: 0px;
+      color: gray;
       font-size: 1.3rem;
+    }
+    .newsletter {
+      color: white;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+      }
+      p {
+        color: gray;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+      .form {
+        display: flex;
+        input {
+          padding: 10px;
+          border-radius: 5px;
+          outline: none;
+        }
+        .button {
+          color: white;
+          background: $primaryColor;
+          margin-left: 5px;
+          padding: 0px 50px;
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 }

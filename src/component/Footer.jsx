@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid , Button } from "@material-ui/core";
 import logo from "../assets/images/logo.png";
 import {
   Facebook,
@@ -90,12 +90,21 @@ const Footer = () => {
           </div>
         </Grid>
       </Grid>
-      <Grid container id="fotterBottom" >
-        <Grid item xs={5} >
-          <p className="copyRight" >Copyrights @ebarnali. All Rights Reserved</p>
+      <Grid container id="fotterBottom">
+        <Grid item xs={5}>
+          <p className="copyRight">Copyrights @QFill. All Rights Reserved</p>
         </Grid>
-        <Grid item xs={7}>
-
+        <Grid item xs={4}>
+          <section className="newsletter">
+            <h3>Newsletter</h3>
+            <p>
+              Subscribe to our Newsletter and get bonuses for the next purchase
+            </p>
+            <section className="form" >
+            <input type="text" placeholder="Your Email Address" />
+            <Button className="button" >Sign Up</Button>
+            </section>
+          </section>
         </Grid>
       </Grid>
     </footer>
