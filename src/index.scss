@@ -583,18 +583,30 @@ nav {
     .cart {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin: 0 1rem;
-      cursor: pointer;
-      p {
-        font-size: 1.1rem;
-      }
-      .cartIcon {
-        font-size: 2rem;
-      }
       .cartSecs {
         text-align: center;
-        margin: 5px 0.6rem 0;
+        margin: 5px 10px 0;
+        .cartIcon {
+          font-size: 2rem;
+          margin-top: 5px;
+        }
+        .text{
+          margin-top: -5px;
+        }
+      }
+      .profileSec{
+        display: flex;
+        padding: 5px;
+        border: 1px solid silver;
+        border-radius: 5px;
+        .username{
+          font-weight: 500;
+          font-size: 1.6rem;
+        }
+        .profileIcon{
+          //  margin-top: 5px;
+           font-size: 2.5rem;
+        }
       }
     }
   }

@@ -1,9 +1,10 @@
-import { ALERT_START, ALERT_END } from "../constant/global.constant";
+import { ALERT_START, ALERT_END , LOADING_END ,LOADING_START} from "../constant/global.constant";
 
 const initialState = {
   flag: false,
   type: "",
-  msg: ""
+  msg: "",
+  loading: false
 };
 
 const globalReducer = (state = initialState, action) => {
@@ -18,6 +19,14 @@ const globalReducer = (state = initialState, action) => {
         type: "",
         msg: "",
       };
+    case LOADING_START:
+      return{
+        ...state, loading: true
+      }
+    case LOADING_END:
+      return{
+        ...state, loading: false
+      }
     default:
       return state;
   }

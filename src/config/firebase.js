@@ -1,15 +1,16 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDjbnVLAwGn9A2K8WtwDA3HImHQomhlNh8",
-  authDomain: "e-barnali.firebaseapp.com",
-  projectId: "e-barnali",
-  storageBucket: "e-barnali.appspot.com",
-  messagingSenderId: "555633833270",
-  appId: "1:555633833270:web:db2d48552e8cafa226ef97",
-  measurementId: "G-XFNBPYX9BP",
+  apiKey: "AIzaSyDGsQ04aQSVWbbkYhdQVUFJj72U2UbQfIY",
+  authDomain: "qfill-a2f0f.firebaseapp.com",
+  projectId: "qfill-a2f0f",
+  storageBucket: "qfill-a2f0f.appspot.com",
+  messagingSenderId: "649543811163",
+  appId: "1:649543811163:web:f8cd9c1bf86eb2ac6ebf7e",
+  measurementId: "G-C9QR5YWTPF"
 };
 
 firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
+export const db = firebase.firestore();

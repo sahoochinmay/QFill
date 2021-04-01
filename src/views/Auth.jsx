@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import {
-  CircularProgress,
-  Backdrop,
-} from "@material-ui/core";
+import { CircularProgress, Backdrop } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Person,
@@ -11,10 +8,11 @@ import {
   Twitter,
   Instagram,
   LinkedIn,
+  Email,
 } from "@material-ui/icons";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { ShowAlert } from "../action/global.action";  
+import { ShowAlert } from "../action/global.action";
 import { SignIn, SignUp } from "../action/auth.action";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,11 +26,12 @@ const Auth = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
   const history = useHistory();
-  const { loading, isLoggedIn } = useSelector((state) => state.authReducer);
+  const { isLoggedIn } = useSelector((state) => state.authReducer);
   console.log(isLoggedIn);
   const [isSignIn, setIsSignIn] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState("");
   if (isLoggedIn) {
     history.push("/home");
     return <p>You are loggedin.</p>;
@@ -48,18 +47,24 @@ const Auth = () => {
       );
       return;
     }
+    if (!isSignIn && userName === "") {
+      dispatch(
+        ShowAlert({
+          type: "error",
+          msg: "Please fill out all the fields.",
+        })
+      );
+      return;
+    }
     {
       isSignIn
         ? dispatch(SignIn(email, password))
-        : dispatch(SignUp(email, password));
+        : dispatch(SignUp(email, password, userName));
     }
   };
 
   return (
     <section id="authContainer">
-      <Backdrop className={classes.backdrop} open={loading}>
-        <CircularProgress color="inherit" />
-      </Backdrop>
       <div className={`container ${isSignIn ? null : "sign-up-mode"}`}>
         <div className="forms-container">
           <div className="signin-signup">
@@ -72,7 +77,7 @@ const Auth = () => {
             >
               <h2 className="title">Sign in</h2>
               <div className="input-field">
-                <Person className="icon" />
+                <Email className="icon" />
                 <input
                   type="text"
                   placeholder="E-mail"
@@ -143,6 +148,15 @@ const Auth = () => {
               <h2 className="title">Sign up</h2>
               <div className="input-field">
                 <Person className="icon" />
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                />
+              </div>
+              <div className="input-field">
+                <Email className="icon" />
                 <input
                   type="email"
                   placeholder="Email"

@@ -12,10 +12,15 @@ import {
 } from "@material-ui/icons";
 import { Rating } from "@material-ui/lab";
 import {useHistory} from 'react-router-dom'
+import {AddToCart} from '../action/cart.action'
+import {useDispatch , useSelector} from 'react-redux'
 
 const ProductDetailsOne = (props) => {
   const history = useHistory()
+  const dispatch = useDispatch()
   const data = props?.location?.data;
+  const {cartProduct} = useSelector(state => state.cartReducer)
+  console.log(cartProduct);
   const [selectImg, setSelectImg] = useState(data?.img[0]);
   const [descriptionLength ,setDescriptionLength] = useState(350)
   if(data === undefined){
@@ -23,6 +28,9 @@ const ProductDetailsOne = (props) => {
   }
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + `...` : string;
+  }
+  const handleAddToCart = () =>{
+
   }
   return (
     <section id="productDetailsOne">

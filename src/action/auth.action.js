@@ -1,24 +1,35 @@
 import {
   AUTH_SIGNIN,
-  AUTH_END,
-  AUTH_START,
   AUTH_SIGNOUT,
   AUTH_SIGNUP,
 } from "../constant/auth.constant";
-import { auth } from "../config/firebase";
-import { ShowAlert } from './global.action'
+import { auth, db } from "../config/firebase";
+import { ShowAlert } from "./global.action";
+import { LOADING_END, LOADING_START } from "../constant/global.constant";
 
 export const SignIn = (email, password) => (dispatch) => {
   dispatch({
-    type: AUTH_START,
+    type: LOADING_START,
     payload: null,
   });
   auth
     .signInWithEmailAndPassword(email, password)
     .then((res) => {
+      let id = res?.user?.uid;
+      db.collection("user")
+        .doc(id)
+        .get()
+        .then((data) => {
+          dispatch({
+            type: AUTH_SIGNIN,
+            payload: data?.data(),
+          });
+        });
+    })
+    .then((res) => {
       dispatch({
-        type: AUTH_SIGNIN,
-        payload: res.user,
+        type: LOADING_END,
+        payload: null,
       });
       dispatch(
         ShowAlert({
@@ -35,23 +46,43 @@ export const SignIn = (email, password) => (dispatch) => {
         })
       );
       dispatch({
-        type: AUTH_END,
+        type: LOADING_END,
         payload: null,
       });
     });
 };
 
-export const SignUp = (email,password) => dispatch => {
-  console.log("signup start");
+export const SignUp = (email, password, userName) => (dispatch) => {
   dispatch({
-    type: AUTH_START,
+    type: LOADING_START,
     payload: null,
   });
-  auth.createUserWithEmailAndPassword(email,password)
+  auth
+    .createUserWithEmailAndPassword(email, password)
     .then((res) => {
+      let id = res?.user?.uid;
+      let user = {
+        _id: id,
+        email: res?.user?.email,
+        userName: userName,
+      };
+      console.log(user);
+      db.collection("user")
+        .doc(id)
+        .set({
+          ...user,
+        })
+        .then(() => {
+          dispatch({
+            type: AUTH_SIGNUP,
+            payload: user,
+          });
+        });
+    })
+    .then(() => {
       dispatch({
-        type: AUTH_SIGNUP,
-        payload: res.user,
+        type: LOADING_END,
+        payload: null,
       });
       dispatch(
         ShowAlert({
@@ -60,9 +91,9 @@ export const SignUp = (email,password) => dispatch => {
         })
       );
     })
-    .catch(err => {
+    .catch((err) => {
       dispatch({
-        type: AUTH_END,
+        type: LOADING_END,
         payload: null,
       });
       dispatch(
@@ -71,12 +102,12 @@ export const SignUp = (email,password) => dispatch => {
           msg: err.message,
         })
       );
-    })
-}
+    });
+};
 
 export const SignOut = () => (dispatch) => {
   dispatch({
-    type: AUTH_START,
+    type: LOADING_START,
     payload: null,
   });
   auth
@@ -84,6 +115,10 @@ export const SignOut = () => (dispatch) => {
     .then(() => {
       dispatch({
         type: AUTH_SIGNOUT,
+        payload: null,
+      });
+      dispatch({
+        type: LOADING_END,
         payload: null,
       });
       dispatch(
@@ -101,7 +136,7 @@ export const SignOut = () => (dispatch) => {
         })
       );
       dispatch({
-        type: AUTH_END,
+        type: LOADING_END,
         payload: null,
       });
     });
