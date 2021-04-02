@@ -6,14 +6,14 @@ import {
   AccountCircle,
 } from "@material-ui/icons";
 import logo from "../assets/images/logo.png";
-import { useHistory, NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const NavBar = () => {
   const history = useHistory();
   const { isLoggedIn, user } = useSelector((state) => state.authReducer);
   return (
-    <nav id="navBar">
+    <section id="navBar">
       <div id="logo">
         <img
           src={logo}
@@ -26,9 +26,6 @@ const NavBar = () => {
         <ul>
           <li>
             <a onClick={() => history.push("/home/")}>Home</a>
-          </li>
-          <li>
-            <NavLink exact to="/home/">Homee </NavLink>
           </li>
           {/* <li>
             <a href="#">Teracotta</a>
@@ -51,7 +48,7 @@ const NavBar = () => {
           <section
             className="cartSecs"
             onClick={() => {
-              isLoggedIn ? history.push("/home/cart") : history.push("/auth/");
+              isLoggedIn ? history.push("/home/cart/") : history.push("/auth/");
             }}
           >
             <ShoppingCart className="cartIcon" />
@@ -71,7 +68,7 @@ const NavBar = () => {
             <section
               class="profileSec"
               onClick={() => {
-                history.push("/profile/");
+                history.push("/home/profile/");
               }}
             >
               <AccountCircle className="profileIcon" />
@@ -80,7 +77,7 @@ const NavBar = () => {
           )}
         </div>
       </div>
-    </nav>
+    </section>
   );
 };
 

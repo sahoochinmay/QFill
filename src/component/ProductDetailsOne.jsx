@@ -8,33 +8,36 @@ import {
   Pinterest,
   FileCopyOutlined,
   ShoppingCart,
-  FlashOn
+  FlashOn,
+  Edit,
 } from "@material-ui/icons";
 import { Rating } from "@material-ui/lab";
-import {useHistory} from 'react-router-dom'
-import {AddToCart} from '../action/cart.action'
-import {useDispatch , useSelector} from 'react-redux'
+import { useHistory } from "react-router-dom";
+import { AddToCart } from "../action/cart.action";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductDetailsOne = (props) => {
-  const history = useHistory()
-  const dispatch = useDispatch()
+  const history = useHistory();
+  const dispatch = useDispatch();
   const data = props?.location?.data;
-  const {user} = useSelector(state => state.authReducer)
-  const {cartProduct} = useSelector(state => state.cartReducer)
+  const { user } = useSelector((state) => state.authReducer);
+  const { cartProduct } = useSelector((state) => state.cartReducer);
   const [selectImg, setSelectImg] = useState(data?.img[0]);
-  const [descriptionLength ,setDescriptionLength] = useState(350)
-  if(data === undefined){
-    history.push("/home/")
+  const [descriptionLength, setDescriptionLength] = useState(350);
+  if (data === undefined) {
+    history.push("/home/");
   }
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + `...` : string;
   }
-  const handleAddToCart = () =>{
-      dispatch(AddToCart({
+  const handleAddToCart = () => {
+    dispatch(
+      AddToCart({
         uid: user?._id,
-        data:data
-      }))
-  }
+        data: data,
+      })
+    );
+  };
   return (
     <section id="productDetailsOne">
       <img src={offerBannerOne} className="offer_banner_one" />
@@ -62,7 +65,9 @@ const ProductDetailsOne = (props) => {
         <Grid item xs={5}>
           <p className="detail_title">{data?.title}</p>
           <p className="brand_name">Brand: {data?.seller}</p>
-          <p className="description">{truncate(data?.description,descriptionLength)}</p>
+          <p className="description">
+            {truncate(data?.description, descriptionLength)}
+          </p>
           <p className="category">{data?.category}</p>
           <p className="detail_price">
             ₹ {data?.discount}&nbsp;&nbsp;&nbsp;&nbsp;
@@ -79,9 +84,28 @@ const ProductDetailsOne = (props) => {
           </section>
           <p className="stock">Only {data?.stock} left in stock.</p>
           <section className="buttons">
-            <Button className="cart_button button" onClick={handleAddToCart} > <ShoppingCart className="icon" />Add To Cart</Button>
-            <Button className="buy_button button"><FlashOn className="icon" />Buy Now</Button>
+            <Button className="cart_button button" onClick={handleAddToCart}>
+              {" "}
+              <ShoppingCart className="icon" />
+              Add To Cart
+            </Button>
+            <Button className="buy_button button">
+              <FlashOn className="icon" />
+              Buy Now
+            </Button>
           </section>
+          <Button
+            className="customize_button"
+            onClick={() =>
+              history.push({
+                pathname: "/home/customize",
+                data: data,
+              })
+            }
+          >
+            <Edit />
+            &nbsp;&nbsp;Customize Order
+          </Button>
         </Grid>
         <Grid item xs={2}>
           <section className="share_box">

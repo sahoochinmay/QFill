@@ -43,6 +43,7 @@ const Landing = () => {
     <>
       {/* section:header */}
       <section id="header">
+      <NavBar />
         <div class="opa">
           <div class="headerText">
             <h2 id="caption">Unique creations</h2>
@@ -50,7 +51,7 @@ const Landing = () => {
             <small> For Unique Occasions</small>
 
             <div class="buttonWrapper">
-              <a href="">SHOP NOW</a>
+              <a onClick={() => history.push("/home/")}>SHOP NOW</a>
               <a href="" id="a2">
                 TRENDING NOW
               </a>
@@ -58,8 +59,8 @@ const Landing = () => {
           </div>
         </div>
         <img src={sliderSelect} alt="slider" id="image" />
-        <NavBar />
       </section>
+     
       {/* <!--- section: Second--> */}
       <section id="second">
         <Grid container>
@@ -251,6 +252,7 @@ const Landing = () => {
       </section>
  
       {/* section: footer */}
+      <section id="contact" ></section>
       <Footer />
     </>
   );

@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Paper, Button } from "@material-ui/core";
+import { VerifiedUser , ShoppingCartOutlined } from "@material-ui/icons";
 import map from "../assets/images/map.png";
 import CartProduct from "../component/CartProduct";
 import { useSelector, useDispatch } from "react-redux";
+import {useHistory} from 'react-router-dom'
 import { fetchCart } from "../action/cart.action";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const history = useHistory()
   const { user } = useSelector((state) => state.authReducer);
   const { cartProduct, reload } = useSelector((state) => state.cartReducer);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [discountPrice, setDiscountPrice] = useState(0)
+  const [discountPrice, setDiscountPrice] = useState(0);
   useEffect(() => {
     dispatch(fetchCart(user?._id));
   }, [reload]);
@@ -23,11 +26,11 @@ const Cart = () => {
     cartProduct.forEach((data) => {
       console.log(data?.price);
       tPrice = tPrice + data?.price;
-      let differ = data?.price - data?.discount
+      let differ = data?.price - data?.discount;
       dPrice = dPrice + differ;
     });
     setTotalPrice(tPrice);
-    setDiscountPrice(dPrice)
+    setDiscountPrice(dPrice);
   };
   return (
     <section id="cart">
@@ -65,7 +68,9 @@ const Cart = () => {
           })}
           {cartProduct.length === 0 ? (
             <section className="empty_section">
-              <h1>No product added in the cart</h1>
+              <ShoppingCartOutlined className="empty" />
+              <h1>Your Cart is Empty</h1>
+              <Button className="shop_button" onClick={() => history.push("/home")} >Shop Now</Button>
             </section>
           ) : (
             <Button className="place_order_button">Place Order</Button>
@@ -93,10 +98,29 @@ const Cart = () => {
               <span>₹{totalPrice - discountPrice}</span>
             </p>
             <hr />
-            <p className="saving">You will save ₹{discountPrice} on this order</p>
+            <p className="saving">
+              You will save ₹{discountPrice} on this order
+            </p>
           </Paper>
+          <section className="security">
+            <VerifiedUser className="icon" />
+            <p className="secure_text">
+              &nbsp;&nbsp;&nbsp;Safe and Secure Payments.Easy conversion.100%
+              Authentic products.
+            </p>
+          </section>
         </Grid>
       </Grid>
+      {/* <section className="cart_bottom">
+        <p>
+          Policies:&nbsp;&nbsp;Returns&nbsp;Policy&nbsp;|&nbsp;Terms&nbsp;of&nbsp;use&nbsp;|&nbsp;Security&nbsp;|&nbsp;Privacy&nbsp;|&nbsp;Infringement
+        </p>
+        <p>© 20021 QFill.com</p>
+        <p>
+          Need help? Visit the <span>Help Center</span> or
+          <span>Contact Us</span>
+        </p>
+      </section> */}
     </section>
   );
 };
