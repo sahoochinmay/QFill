@@ -1,4 +1,4 @@
-import {ADD_TO_CART , REMOVE_FROM_CART  , PLACE_ORDER , RELOAD_CART} from '../constant/cart.constant'
+import {ADD_TO_CART , REMOVE_FROM_CART , RELOAD_CART} from '../constant/cart.constant'
 
 const initialState = {
     cartProduct:[],

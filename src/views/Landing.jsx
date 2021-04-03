@@ -3,12 +3,11 @@ import { Grid, Button } from "@material-ui/core";
 import { LocalShipping, Phone, Security, LocalOffer } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
 // images
+import homegif from "../assets/gif/home.gif";
 import logo from "../assets/images/logo.png";
 import slider1 from "../assets/images/slider1.jpg";
 import slider2 from "../assets/images/slider2.jpg";
 import slider3 from "../assets/images/slider3.jpg";
-import s2p1 from "../assets/images/s2p1.png";
-import s2p2 from "../assets/images/s2p2.png";
 import Footer from "../component/Footer";
 import NavBar from "../component/NavBar";
 import LandingProduct from "../component/LandingProduct";
@@ -43,12 +42,12 @@ const Landing = () => {
     <>
       {/* section:header */}
       <section id="header">
-      <NavBar />
+        <NavBar />
         <div class="opa">
           <div class="headerText">
-            <h2 id="caption">Unique creations</h2>
+            <h2 id="caption">Your imagination</h2>
 
-            <small> For Unique Occasions</small>
+            <small> our creation.</small>
 
             <div class="buttonWrapper">
               <a onClick={() => history.push("/home/")}>SHOP NOW</a>
@@ -58,9 +57,9 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <img src={sliderSelect} alt="slider" id="image" />
+        <img src={homegif} alt="slider" id="image" />
       </section>
-     
+
       {/* <!--- section: Second--> */}
       <section id="second">
         <Grid container>
@@ -78,15 +77,18 @@ const Landing = () => {
           <Grid item xs={7}>
             <div class="imageWrapper">
               <div class="shade"></div>
-              <iframe
+              {/* <iframe
                 width="100%"
                 height="355"
-                src="https://www.youtube.com/embed/BKMQLt_j_Zo?controls=0&amp;showinfo=0&amp;autoplay=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; loop=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                allow="autoplay"
-              ></iframe>
+                src="https://firebasestorage.googleapis.com/v0/b/qfill-a2f0f.appspot.com/o/Space%20Saving%20Furniture%20Demonstration%20with%20Glass%20Coffee%20to%20Dining%20table.mp4?alt=media&token=a41933e2-70cb-44f8-bc63-9a80179de063"
+                
+              ></iframe> */}
+              <video width="100%" height="325"  autoPlay muted>
+                <source
+                  src="https://firebasestorage.googleapis.com/v0/b/qfill-a2f0f.appspot.com/o/Space%20Saving%20Furniture%20Demonstration%20with%20Glass%20Coffee%20to%20Dining%20table.mp4?alt=media&token=a41933e2-70cb-44f8-bc63-9a80179de063"
+                  type="video/mp4"
+                />
+              </video>
               {/* <img src="images/mdbg.jpg" alt="" srcset=""> */}
             </div>
           </Grid>
@@ -106,7 +108,7 @@ const Landing = () => {
           })}
         </Grid>
       </section>
- 
+
       {/* section: six */}
       <section id="sixth">
         <Grid container direction="row" justify="center">
@@ -118,7 +120,9 @@ const Landing = () => {
                 Perfect to optimise space in the house ...
               </pre>
 
-              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
+              <Button onClick={() => history.push("/home")} className="button">
+                Explore
+              </Button>
             </div>
           </Grid>
           <Grid
@@ -133,7 +137,9 @@ const Landing = () => {
 
               <pre class="leftp">Solidwood Study Table With Book Rack.</pre>
 
-              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
+              <Button onClick={() => history.push("/home")} className="button">
+                Explore
+              </Button>
             </div>
           </Grid>
         </Grid>
@@ -150,14 +156,18 @@ const Landing = () => {
 
               <pre class="leftp">Dressing Table With Storage Stool.</pre>
 
-              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
+              <Button onClick={() => history.push("/home")} className="button">
+                Explore
+              </Button>
             </div>
           </Grid>
           <Grid item xs={7}>
             <div class="rightSecond">
               <h3 id="blackHeading">Retica Wall Shelf</h3>
               <pre class="leftp">Serve stunning beauty and functionality.</pre>
-              <Button onClick={() => history.push("/home")} className="button">Explore</Button>
+              <Button onClick={() => history.push("/home")} className="button">
+                Explore
+              </Button>
             </div>
           </Grid>
         </Grid>
@@ -250,9 +260,9 @@ const Landing = () => {
           })}
         </Grid>
       </section>
- 
+
       {/* section: footer */}
-      <section id="contact" ></section>
+      <section id="contact"></section>
       <Footer />
     </>
   );

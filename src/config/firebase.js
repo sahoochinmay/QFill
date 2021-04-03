@@ -16,3 +16,4 @@ export const auth = firebase.auth();
 export const db = firebase.firestore();
 export const userRef = db.collection('user')
 export const cartRef = db.collection('cart')
+export const orderRef = db.collection('order')

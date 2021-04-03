@@ -392,7 +392,7 @@ html {
     right: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.78));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     opacity: 0.35;
     z-index: -1;
   }
@@ -420,7 +420,8 @@ html {
     }
     small {
       display: inline-block;
-      font-size: 2.2rem;
+      font-size: 2.8rem;
+      font-weight: 700;
       color: white;
       text-shadow: 0 0 10px black;
       margin-bottom: 1.2rem;
@@ -509,10 +510,11 @@ html {
   z-index: 99;
   #logo {
     cursor: pointer;
+    margin-left: 20px;
     & img {
       display: inline-block;
-      width: 250px;
-      height: auto;
+      width: 200px;
+      height: 40px;
     }
   }
   span {
@@ -1329,27 +1331,27 @@ html {
       font-size: 2rem;
       font-weight: 600;
     }
-    .ratingSection{
+    .ratingSection {
       display: flex;
-      .rating{
+      .rating {
         height: 20px;
       }
       font-size: 1.4rem;
-      p{
+      p {
         margin-top: -3px;
       }
     }
-    .head{
+    .head {
       margin: 7px 0;
       font-size: 1.5rem;
       font-weight: 600;
     }
-    .qulity_box{
-      strong{
+    .qulity_box {
+      strong {
         font-size: 1.2rem;
       }
     }
-    .request_btn{
+    .request_btn {
       width: 100%;
       margin: 10px 0;
       font-size: 1.8rem;
@@ -1359,6 +1361,114 @@ html {
     }
   }
 }
+
+////////////////////////////////////////////////////////
+/////////////////////// section:order //////////////////////
+////////////////////////////////////////////////////////
+#checkout_sec {
+  margin-top: 20px;
+  padding: 20px 40px;
+  .address_sec {
+    padding: 10px;
+    display: flex;
+    position: relative;
+    .icon {
+      margin-top: 5px;
+      margin-right: 10px;
+      font-size: 1.7rem;
+      color: $primaryColor;
+    }
+    h1 {
+      color: gray;
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+    .change_btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      height: 30px;
+      border: 1px solid $primaryColor;
+      text-transform: none;
+      font-size: 1.1rem;
+      // padding: 5px 10px  !important;
+    }
+  }
+  .order_summary {
+    margin-top: 20px;
+    padding-bottom: 80px;
+    h1 {
+      font-size: 1.5rem;
+      padding: 5px;
+      background: $primaryColor;
+      color: white;
+    }
+    .place_order_button {
+      margin: 15px 10px;
+      background: $primaryColor;
+      color: white;
+      display: block;
+      float: right;
+      padding: 10px 40px;
+      font-size: 1.7rem;
+      border-radius: 2px;
+    }
+  }
+  .price_details {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    .title {
+      font-size: 2rem;
+      color: rgb(83, 83, 83);
+    }
+    p {
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+    hr {
+      margin-top: 5px;
+    }
+    span {
+      float: right;
+    }
+    .total_amount {
+      font-weight: bold;
+    }
+    .saving {
+      color: green;
+      font-weight: 500;
+    }
+  }
+  .security {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    color: gray;
+    .secure_text {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .icon {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////
+/////////////////////// section:order //////////////////////
+////////////////////////////////////////////////////////
+#order_sec {
+  padding: 20px 60px;
+  .heading {
+    font-size: 2.5rem;
+  }
+  .orderProduct {
+  }
+}
+
 ////////////////////////////////////////////////////////
 /////////////////////// section:footer //////////////////////
 ////////////////////////////////////////////////////////

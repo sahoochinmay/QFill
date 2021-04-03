@@ -1,5 +1,4 @@
 import React from "react";
-import slide2 from "../assets/images/s2p1.png";
 import { Rating } from "@material-ui/lab";
 import { useHistory } from "react-router-dom";
 

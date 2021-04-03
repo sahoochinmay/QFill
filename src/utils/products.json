@@ -309,5 +309,92 @@
       "https://i.imgur.com/iJ0gt4J.jpg",
       "https://i.imgur.com/ULdzxV4.jpg"
     ]
+  },
+  {
+    "title": "Eucalyptus Garden Furniture",
+    "description": "Table: L1700/650 * W1030 *H775 Chair (x6): W480*D565*H870",
+    "price": 35999,
+    "discount": 25000,
+    "seller": "TPF",
+    "rating": 5,
+    "total_rating": 13,
+    "stock": 9,
+    "category": "Garden Furniture Set",
+    "id": "5000",
+    "img": [
+      "https://i.imgur.com/rcSybXm.jpg",
+      "https://i.imgur.com/8AAFidZ.jpg"
+    ]
+  },
+
+  {
+    "title": "Rotating Murphy Vertical Wall Bed with Desk, Multifunctional Furniture Saving Space",
+    "description": "Murphy Vertical Wall Bed with Desk, Multifunctional Furniture Saving Space 1.wall bed with desk 2.Sofa hidden bed 3.Whole home cabinetry design",
+    "price": 72999,
+    "discount": 62999,
+    "seller": "Meloni house",
+    "rating": 4.9,
+    "total_rating": 10,
+    "stock": 6,
+    "category": "Bed",
+    "id": "8234",
+    "img": [
+      "https://i.imgur.com/qMoLi5l.jpg",
+      "https://i.imgur.com/VeBqrji.jpg"
+    ]
+  },
+
+  {
+    "title": "folding bed",
+    "description": "General use home study room furniture space saving folding bed with foam mattress metal sleeping cots",
+    "price": 6789,
+    "discount": 5678,
+    "seller": "EASY REST",
+    "rating": 5,
+    "total_rating": 17,
+    "stock": 8,
+    "category": "Folding Bed",
+    "id": "9993",
+    "img": [
+      "https://i.imgur.com/rMikAi6.jpg",
+      "https://i.imgur.com/HJ93Y6b.jpg",
+      "https://i.imgur.com/2JEbFPW.jpg"
+    ]
+  },
+
+  {
+    "title": "double bunk wall bed with study table",
+    "description": "Adjustable (height), Foldable, Adjustable (other), Convertible. The price just includes bed,box,mechanism,if you need other storage cabinet,pls kindly let us know,we will give you a new price.",
+    "price": 76999,
+    "discount": 65999,
+    "seller": "Meloni",
+    "rating": 5,
+    "total_rating": 12,
+    "stock": 8,
+    "category": "Multipurpose bed",
+    "id": "2793",
+    "img": [
+      "https://i.imgur.com/GjpW6lj.jpg",
+      "https://i.imgur.com/bmSxFyO.jpg",
+      "https://i.imgur.com/ToHoXQg.jpg"
+    ]
+  },
+
+  {
+    "title": "Extendable wood folding dining room table chair set",
+    "description": "moisture resistance ,anti-dirty ,anti-scratch ,acid-base proof ,high temperature resistance ,smooth surface, foldable and space saving",
+    "price": 35000,
+    "discount": 29899,
+    "seller": "GCON",
+    "rating": 5,
+    "total_rating": 21,
+    "stock": 9,
+    "category": "Multipurpose Table",
+    "id": "3758",
+    "img": [
+      "https://i.imgur.com/zomGSTn.jpg",
+      "https://i.imgur.com/4AqV5vc.jpg",
+      "https://i.imgur.com/xbLOSAA.jpg"
+    ]
   }
 ]

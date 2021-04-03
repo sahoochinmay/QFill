@@ -10,6 +10,8 @@ import Cart from "./Cart";
 import AllDrawer from "../component/AllDrawer";
 import Profile from "./Profile";
 import Customize from "./Customize";
+import Order from "./Order";
+import CheckOut from "./CheckOut";
 
 const Home = () => {
   const history = useHistory();
@@ -68,6 +70,8 @@ const Home = () => {
         <Route exact path="/home/cart" component={Cart} />
         <Route exact path="/home/profile" component={Profile} />
         <Route exact path="/home/customize" component={Customize} />
+        <Route exact path="/home/order" component={Order} />
+        <Route exact path="/home/checkout" component={CheckOut} />
       </Switch>
       <section className="footer_inner">
         <p>

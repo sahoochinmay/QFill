@@ -8,10 +8,12 @@ import {persistReducer } from 'redux-persist'
 import authReducer from './auth.reducer'
 import globalReducer from './global.reducer'
 import cartReducer from './cart.reducer'
-const reducers =persistReducer({storage: storage,key:'la' }, combineReducers({
+import orderReducer from './order.reducer'
+const reducers =persistReducer({storage: storage,key:'fil' }, combineReducers({
   authReducer,
   globalReducer,
-  cartReducer
+  cartReducer,
+  orderReducer
 }));
 
 let middleware = [];

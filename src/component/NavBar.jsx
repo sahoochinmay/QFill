@@ -27,18 +27,15 @@ const NavBar = () => {
           <li>
             <a onClick={() => history.push("/home/")}>Home</a>
           </li>
-          {/* <li>
-            <a href="#">Teracotta</a>
+          <li>
+            <a>Offers</a>
           </li>
           <li>
-            <a href="#">Kandhei</a>
+            <a>Seller</a>
           </li>
           <li>
-            <a href="#">Pot</a>
+            <a>Customize Order</a>
           </li>
-          <li>
-            <a href="#">Chandua</a>
-          </li> */}
         </ul>
         <div class="searchBox">
           <input type="search" name="" id="" placeholder="Search here..." />
