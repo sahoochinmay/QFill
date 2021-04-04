@@ -7,11 +7,9 @@ const Order = () => {
     const dispatch = useDispatch()
   const {user} = useSelector(state => state.authReducer)
   const { orderList } = useSelector((state) => state.orderReducer);
-  console.log(user);
   useEffect(() => {
     dispatch(fetchOrders(user?._id))
   }, [])
-  console.log(orderList);
   return (
     <section id="order_sec">
       <h1 className="heading">Your Orders</h1>

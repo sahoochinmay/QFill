@@ -24,7 +24,6 @@ const Cart = () => {
     let tPrice = 0;
     let dPrice = 0;
     cartProduct.forEach((data) => {
-      console.log(data?.price);
       tPrice = tPrice + data?.price;
       let differ = data?.price - data?.discount;
       dPrice = dPrice + differ;

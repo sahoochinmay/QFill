@@ -60,7 +60,6 @@ export const AddToCart = ({ uid, data }) => (dispatch) => {
       ...data,
     })
     .then((data) => {
-      console.log(data);
       dispatch({
         type: LOADING_END,
         payload: null,

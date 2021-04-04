@@ -10,7 +10,6 @@ const AllDrawer = ({ toggleDrawer }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const { user } = useSelector((state) => state.authReducer);
-  console.log(user);
   return (
     <section
       id="all_drawer"

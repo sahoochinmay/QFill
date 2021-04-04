@@ -32,7 +32,6 @@ const Customize = (props) => {
   const [material, setMaterial] = useState("wood");
   const [priceRange, setPriceRange] = useState([5, 10]);
   const [color, setColor] = useState("#fff");
-  console.log(data);
   if (data === undefined) {
     history.push("/home/");
   }

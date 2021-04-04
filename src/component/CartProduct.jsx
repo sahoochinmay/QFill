@@ -8,8 +8,6 @@ const CartProduct = ({ data }) => {
   const { user } = useSelector((state) => state.authReducer);
   const [productCount, setProductCount] = useState(1);
   const handleRemoveProduct = () => {
-    console.log(data?._id);
-    console.log(user?._id);
     dispatch(
       RemoveFromCart({
         uid: user?._id,
