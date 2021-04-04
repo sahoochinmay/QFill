@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# QFill 
+## Your imagination, our creation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### TEAM FierceX
+ - AUROSHREE VIKRANT MOHANTY
+ - CHINMAY RANJAN SAHOO
+ - SMRUTI SOURAV NANDA
+ - T.R.DHANYA
 
-## Available Scripts
+### PROBLEM STATEMENT
 
-In the project directory, you can run:
+- In various metropolises of the world, specially in a country like India, people’s mediocre living area is getting smaller and smaller. More and more young people incline to move to large cities for more opportunities and more active life style.
+- Furthermore, high population density leads many other hitches such as high gap between rich and poor, great energy cost and house price. These are common difficulties in metropolis nowadays.
+- However, this phenomenon drops the average living area gradually.
+- You will know how significant saving space is until you are living in a place with not much space, wherein you could be able to place all of your furniture and stuff in.
+- You have to make the most of every nook and corner just to make sure that you have everything set up. And most of the time, you might still not have sufficient space to at least walk around it. 
 
-### `yarn start`
+## SOLUTION QFILL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Now , we have got a modern based approach solution for this underrated yet the most vital problem. 
+- We have designed a website called Qfill which is an online shopping site.
+- The best part of our website is it hasgot all new innovative items which are basically made up of steel , wood ,etc.
+- Items are made foldable which would save the extra space in a widely populated country like India.
+- There will be a customised setting of experts who all would be highly engaged in giving their views on what should be the item with respect to the background of the house..
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ADVANTAGES OF FOLDABLE ITEMS
 
-### `yarn test`
+- One of the foremost and important advantage of having Foldable furniture at home is due to the minimum space that these Foldable Furniture occupy.
+- Foldable furniture is space-saving.
+- Comes in a variety of designs.
+- Easy to carry.
+- Can entertain many guests.
+- Affordable prices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `yarn build`
+- Frontend: Reactjs, MaterialUI
+- Backend: Firebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
