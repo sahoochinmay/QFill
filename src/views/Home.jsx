@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory, Switch, Route } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Menu } from "@material-ui/icons";
 import { Drawer } from "@material-ui/core";
 import NavBar from "../component/NavBar";
@@ -15,7 +15,6 @@ import CheckOut from "./CheckOut";
 
 const Home = () => {
   const history = useHistory();
-  const dispatch = useDispatch();
   const { isLoggedIn } = useSelector((state) => state.authReducer);
   const [drawerState, setDrawerState] = useState(false);
   if (!isLoggedIn) {

@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, Button } from "@material-ui/core";
 import { LocalShipping, Phone, Security, LocalOffer } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
 // images
 import homegif from "../assets/gif/home.gif";
-import logo from "../assets/images/logo.png";
-import slider1 from "../assets/images/slider1.jpg";
-import slider2 from "../assets/images/slider2.jpg";
-import slider3 from "../assets/images/slider3.jpg";
 import Footer from "../component/Footer";
 import NavBar from "../component/NavBar";
 import LandingProduct from "../component/LandingProduct";
@@ -18,23 +14,6 @@ import boxproduct from "../utils/boxproduct.json";
 
 const Landing = () => {
   const history = useHistory();
-  // START: slider
-  const [sliderSelect, setSliderSelect] = useState(slider1);
-  const sliderArr = [slider1, slider2, slider2];
-  let i = 0;
-  let state = 0;
-  // const selectSlider = setInterval(() => {
-  //   setSliderSelect(sliderArr[i]);
-  //   if (i === sliderArr.length - 1) {
-  //     state = 1;
-  //   } else if (i === 0 && state === 1) {
-  //     state = 0;
-  //   }
-  //   console.log(state);
-  //   state === 0 ? i++ : i--;
-  //   console.log("count", i);
-  // }, 3000);
-  // END: slider
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + `...` : string;
   }
@@ -50,8 +29,8 @@ const Landing = () => {
             <small> our creation.</small>
 
             <div class="buttonWrapper">
-              <a onClick={() => history.push("/home/")}>SHOP NOW</a>
-              <a href="" id="a2">
+              <a href="##" onClick={() => history.push("/home/")}>SHOP NOW</a>
+              <a href="##" id="a2">
                 TRENDING NOW
               </a>
             </div>

@@ -6,10 +6,9 @@ import {fetchOrders} from '../action/order.action'
 const Order = () => {
     const dispatch = useDispatch()
   const {user} = useSelector(state => state.authReducer)
-  const { orderList } = useSelector((state) => state.orderReducer);
   useEffect(() => {
     dispatch(fetchOrders(user?._id))
-  }, [])
+  }, [dispatch,user?._id])
   return (
     <section id="order_sec">
       <h1 className="heading">Your Orders</h1>
