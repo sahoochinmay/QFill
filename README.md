@@ -37,7 +37,7 @@
 - Frontend: Reactjs, MaterialUI
 - Backend: Firebase
 
-### [Live Demo](https://sahoochinmay.github.io/QFill#/)
+### [Live Demo](https://sahoochinmay.github.io/QFill/)
 
 ### [Checkout Video](https://youtu.be/kx4PjWU_HkE)
 
