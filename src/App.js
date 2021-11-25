@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// NOTE:
+// HashRouter only use for gh-pages hosting
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Snackbar, Backdrop, CircularProgress } from "@material-ui/core";
 import { Alert } from "@material-ui/lab";
